@@ -6,7 +6,7 @@ Yet another Babel preset for TypeScript, only transforms proposals which TypeScr
 
 So that you can use babel to transform proposals which are current in stage 0-2 and TypeScript team [will not implement them temporarily](https://github.com/Microsoft/TypeScript/issues/19044#event-1293164503).
 
-For now only [babel-plugin-transform-do-expressions](https://www.npmjs.com/package/babel-plugin-transform-do-expressions) is included.
+For now only [babel-plugin-transform-do-expressions](https://www.npmjs.com/package/babel-plugin-transform-do-expressions) and [babel-plugin-transform-function-bind](https://www.npmjs.com/package/babel-plugin-transform-function-bind) are included.
 
 ## Install
 
