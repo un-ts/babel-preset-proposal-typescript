@@ -11,7 +11,8 @@ For now only [babel-plugin-transform-do-expressions](https://www.npmjs.com/packa
 ## Install
 
 ```sh
-npm install --save-dev @babel/preset-ts
+npm install --save-dev babel-preset-ts # npm
+yarn add -D babel-preset-ts # yarn
 ```
 
 ## Usage
@@ -22,21 +23,21 @@ npm install --save-dev @babel/preset-ts
 
 ```json
 {
-  "presets": ["@babel/ts"]
+  "presets": ["ts"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-babel input.ts --presets @babel/ts > output.ts
+babel input.ts --presets ts > output.ts
 ```
 
 ### Via Node API
 
 ```js
 require("@babel/core").transform("code", {
-  presets: ["@babel/ts"]
+  presets: ["ts"]
 });
 ```
 
@@ -52,7 +53,7 @@ loader = {
   }, {
     loader: 'babel-loader',
     options: {
-      presets: ['@babel/ts']
+      presets: ['ts']
     }
   }]
 }

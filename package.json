@@ -1,5 +1,5 @@
 {
-  "name": "@babel/preset-ts",
+  "name": "babel-preset-ts",
   "version": "0.0.1",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "main": "lib/index.js",
