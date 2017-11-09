@@ -1,0 +1,31 @@
+{
+  "name": "@babel/preset-ts",
+  "version": "0.0.1",
+  "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "repository": "https://github.com/JounQin/babel-preset-ts.git",
+  "author": "JounQin <admin@1stg.me>",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "mkdir -p lib && babel --presets @babel/env src/index.js > lib/index.js"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-beta.31"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-decorators": "^7.0.0-beta.31",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.31",
+    "@babel/plugin-syntax-typescript": "^7.0.0-beta.31",
+    "babel-plugin-transform-do-expressions": "^6.22.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.31",
+    "@babel/core": "^7.0.0-beta.31",
+    "@babel/preset-env": "^7.0.0-beta.31"
+  }
+}
