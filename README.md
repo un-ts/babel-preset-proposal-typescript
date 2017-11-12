@@ -1,6 +1,9 @@
-# babel-preset-ts
+# babel-preset-proposal-typescript
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/JounQin/babel-preset-ts.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/JounQin/babel-preset-proposal-typescript.svg)](https://greenkeeper.io/)
+[![Travis](https://img.shields.io/travis/JounQin/babel-preset-proposal-typescript.svg)](https://travis-ci.org/JounQin/babel-preset-proposal-typescript)
+[![David](https://img.shields.io/david/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript)
+[![David Dev](https://img.shields.io/david/dev/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=dev)
 
 Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.
 

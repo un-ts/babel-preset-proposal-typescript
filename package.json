@@ -4,7 +4,7 @@
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "repository": "https://github.com/JounQin/babel-preset-ts.git",
+  "repository": "https://github.com/JounQin/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "scripts": {
