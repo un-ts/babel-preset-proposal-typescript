@@ -11,7 +11,11 @@ before_install:
 
 before_script: greenkeeper-lockfile-update
 
-script: yarn prepublishOnly
+script:
+  - set -e
+  - yarn test
+  - yarn add -D codecov
+  - npx codecov -f coverage/*.json
 
 after_script: greenkeeper-lockfile-upload
 
