@@ -1,9 +1,11 @@
-import { babelExecute, tsExecute } from './helpers'
+import _ from './throw-expressions'
+
+import { execute } from './helpers'
 
 const proposal = 'throw-expressions'
 
 test(proposal, () => {
-  expect(() => tsExecute(proposal)).toThrowErrorMatchingSnapshot()
-  expect(() => babelExecute(proposal)).toThrow('Argument required')
-  expect(babelExecute(proposal, proposal)).toBe(proposal)
+  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
+  expect(() => _()).toThrow('Argument required')
+  expect(_(proposal)).toBe(proposal)
 })

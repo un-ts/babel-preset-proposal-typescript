@@ -1,9 +1,11 @@
-import { babelExecute, tsExecute } from './helpers'
+import _ from './unicode-property-regex'
+
+import { babelExecute, execute } from './helpers'
 
 const proposal = 'unicode-property-regex'
 
 test(proposal, () => {
-  expect(() => tsExecute(proposal)).toThrowErrorMatchingSnapshot()
-  expect(babelExecute(proposal, 'π')).toBe(true)
-  expect(babelExecute(proposal)).toBe(false)
+  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
+  expect(_('π')).toBe(true)
+  expect(_()).toBe(false)
 })

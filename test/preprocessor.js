@@ -1,9 +1,12 @@
-const tsc = require('typescript')
+const babel = require('@babel/core')
+const ts = require('typescript')
 
 module.exports = {
   process(src, path) {
     if (path.endsWith('.ts')) {
-      return tsc.transpile(src, null, path, [])
+      return ts.transpile(babel.transform(src, {
+        presets: ['./lib']
+      }).code, null, path, [])
     }
     return src
   }

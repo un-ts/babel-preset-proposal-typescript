@@ -1,8 +1,10 @@
-import { babelExecute, tsExecute } from './helpers'
+import _ from './function-sent'
+
+import { execute } from './helpers'
 
 const proposal = 'function-sent'
 
 test(proposal, () => {
-  expect(() => tsExecute(proposal)).toThrowErrorMatchingSnapshot()
-  expect(babelExecute(proposal, .3, .4, .5)).toBe(1.2)
+  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
+  expect(_(.3, .4, .5)).toBe(2.2)
 })

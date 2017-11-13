@@ -1,8 +1,10 @@
-import { babelExecute, tsExecute } from './helpers'
+import _ from './nullish-coalescing-operator'
+
+import { execute } from './helpers'
 
 const proposal = 'nullish-coalescing-operator'
 
 test(proposal, () => {
-  expect(() => tsExecute(proposal)).toThrowErrorMatchingSnapshot()
-  expect(babelExecute(proposal)).toEqual(['some other default', 'some other default', '', 0, false])
+  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
+  expect(_()).toEqual(['some other default', 'some other default', '', 0, false])
 })

@@ -16,6 +16,7 @@ function * adder(total?: number = 0) {
 
 export default (...args: number[]) => {
   const tally = adder()
+  tally.next()
   args.forEach(arg => tally.next(arg))
   return tally.next('done').value
 }
