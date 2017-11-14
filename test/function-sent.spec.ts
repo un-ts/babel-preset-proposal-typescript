@@ -5,6 +5,8 @@ import { execute } from './helpers'
 const proposal = 'function-sent'
 
 test(proposal, () => {
-  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
-  expect(_(.3, .4, .5)).toBe(2.2)
+  const args = [.3, .4, .5]
+  const expectResult = 2.2
+  expect(execute(proposal, ...args)).not.toEqual(expectResult)
+  expect(_(...args)).toBe(expectResult)
 })

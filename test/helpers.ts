@@ -10,4 +10,4 @@ const read = (file: string): string => fs.readFileSync(resolve(file) + '.ts').to
 
 const transpile = (content: string) => ts.transpile(content, null)
 
-export const execute = (file: string) => vm.runInNewContext(transpile(read(file)))
+export const execute = (file: string, ...args) => vm.runInNewContext(transpile(read(file)), { exports: {} })(...args)
