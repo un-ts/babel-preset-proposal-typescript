@@ -5,12 +5,12 @@ import syntaxTypeScript from '@babel/plugin-syntax-typescript'
 import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
 import proposalFunctionBind from '@babel/plugin-proposal-function-bind'
 import proposalFunctionSent from '@babel/plugin-proposal-function-sent'
+import proposalJsonStrings from '@babel/plugin-proposal-json-strings'
+import proposalLogicalAssginmentOperators from '@babel/plugin-proposal-logical-assignment-operators'
 import proposalNullishCoalescingOperator from '@babel/plugin-proposal-nullish-coalescing-operator'
-import proposalNumericSeparator from '@babel/plugin-proposal-numeric-separator'
 import proposalOptionalChaining from '@babel/plugin-proposal-optional-chaining'
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
-import proposalUnicodePropertyRegex from '@babel/plugin-proposal-unicode-property-regex'
 
 export default () => ({
   plugins: [
@@ -20,11 +20,11 @@ export default () => ({
     proposalDoExpressions,
     proposalFunctionBind,
     proposalFunctionSent,
+    proposalJsonStrings,
+    proposalLogicalAssginmentOperators,
     proposalNullishCoalescingOperator,
-    proposalNumericSeparator,
     proposalOptionalChaining,
     proposalPipelineOperator,
     proposalThrowExpression,
-    proposalUnicodePropertyRegex
-  ]
+  ],
 })
