@@ -62,7 +62,7 @@
     "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@types/babel-core": "^6.25.4",
-    "@types/jest": "^22.2.3",
+    "@types/jest": "^23.0.0",
     "@types/node": "^10.3.0",
     "jest": "^23.1.0",
     "typescript": "^2.9.1"
