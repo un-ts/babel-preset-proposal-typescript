@@ -14,7 +14,12 @@ import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 
 export default () => ({
   plugins: [
-    syntaxDecorators,
+    [
+      syntaxDecorators,
+      {
+        legacy: true,
+      },
+    ],
     syntaxDynamicImport,
     syntaxTypeScript,
     proposalDoExpressions,
@@ -24,7 +29,12 @@ export default () => ({
     proposalLogicalAssginmentOperators,
     proposalNullishCoalescingOperator,
     proposalOptionalChaining,
-    proposalPipelineOperator,
+    [
+      proposalPipelineOperator,
+      {
+        proposal: 'minimal',
+      },
+    ],
     proposalThrowExpression,
   ],
 })
