@@ -14,16 +14,9 @@ before_script: greenkeeper-lockfile-update
 script:
   - set -e
   - yarn test
+  - yarn build
+
+after_script:
+  - greenkeeper-lockfile-upload
   - yarn global add codecov
   - codecov -f coverage/*.json
-
-after_script: greenkeeper-lockfile-upload
-
-deploy:
-  provider: npm
-  email: admin@1stg.me
-  api_key:
-    secure: DTA6mPMWUWa9IDkoEJ1jJCnelWavdbP5tRhVI4pWwQHMTiGRQ4X5w6iwOA29gLXvCzYmQN2i388q66rdy954YNW2qlbJmw7IoQb0FP3YFuybkz+ZvBoK9dL6gpdlUnvpbMRVmoHz4hbXS+xWXAVNkCVZx46UC5KDxj7s/wUX+93dg19/VLljsfSQMeG8nEZUYvhiJqjuAPPQYkH5b7pp+sbjWXlGiVv+sT6n9pcR3cjkxevL1WtzeS1xvuUYQ4ywvKtZ9wXqY8sFiaiAiNu+LjPN2pese9MxnRj12QsOHvPWejYhfUl4hNzGvEfbG/jPBZgHgoobG3xsoNnfWEJyppdDFXoOkdpqWL5r0dcXH4qKfh+AHifRO8Z6IwEAMZYO+ZM38KYPgQSu85qewuTgtvAr5dCX7ecR3RPqWTNE+eqq+Hxvm/1uc7K9W7J9Ag5N/w2AhCbxRFKJICvWEzsVbY6K4+KWzZB5qsbyXIavA9W2E4PBhiKqNewaietLIvbKoRScWLbDdle8lS/DyHUV4BW/tQi0FkIdjr9lsmvj+EZzfxTTiQA48xgtwwa/LOmCGLEkVTBF0oJEDsfJYTJkQUGmHOm7Ae1CqW51GvUkp4Su77bRAa3oLpKYd+AVRigpc9Q4S9lj9S98d5u2flS66GYUGqOy5A/9afvAbdb4yMk=
-  on:
-    tags: true
-    repo: JounQin/babel-preset-proposal-typescript
