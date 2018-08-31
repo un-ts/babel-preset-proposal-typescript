@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "esnext"
-    ]
+    "lib": ["esnext"],
+    "resolveJsonModule": true
   }
 }
