@@ -63,7 +63,7 @@
     "@babel/preset-env": "^7.0.0",
     "@types/babel-core": "^6.25.5",
     "@types/jest": "^24.0.0",
-    "@types/node": "^10.9.4",
+    "@types/node": "^11.9.0",
     "jest": "^23.5.0",
     "typescript": "^3.0.3"
   }
