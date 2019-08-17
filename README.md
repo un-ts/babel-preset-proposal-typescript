@@ -12,21 +12,27 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 
 ## Enabled proposal plugins
 
-1. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
-2. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
-3. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
-4. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
-5. [logical-assignment-operators](https://www.npmjs.com/package/@babel/plugin-proposal-logical-assignment-operators)
-6. [nullish-coalescing-operator](https://www.npmjs.com/package/@babel/plugin-proposal-nullish-coalescing-operator)
-7. [optional-chaining](https://www.npmjs.com/package/@babel/plugin-proposal-optional-chaining)
-8. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
-9. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+1. [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+2. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
+3. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
+4. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
+5. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
+6. [logical-assignment-operators](https://www.npmjs.com/package/@babel/plugin-proposal-logical-assignment-operators)
+7. [nullish-coalescing-operator](https://www.npmjs.com/package/@babel/plugin-proposal-nullish-coalescing-operator)
+8. [optional-chaining](https://www.npmjs.com/package/@babel/plugin-proposal-optional-chaining)
+9. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
+10. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
+11. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
+12. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
 
 ## Install
 
 ```sh
-npm install --save-dev babel-preset-proposal-typescript # npm
-yarn add -D babel-preset-proposal-typescript # yarn
+# yarn
+yarn add -D babel-preset-proposal-typescript
+
+# npm
+npm i -D babel-preset-proposal-typescript
 ```
 
 ## Usage

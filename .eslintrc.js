@@ -10,7 +10,9 @@ module.exports = {
     },
   },
   settings: {
+    'import/ignore': [/test\/private-methods.ts$/],
     'import/parsers': {
+      '@typescript-eslint/parser': [],
       'babel-eslint': ['.ts'],
     },
     'import/resolver': {
@@ -21,6 +23,12 @@ module.exports = {
     {
       files: '*.{js,ts}',
       ...js,
+    },
+    {
+      files: '*.ts',
+      rules: {
+        'import/namespace': 0,
+      },
     },
     jest,
   ],

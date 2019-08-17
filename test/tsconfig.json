@@ -1,7 +1,0 @@
-{
-  "extends": "@1stg/tsconfig",
-  "compilerOptions": {
-    "esModuleInterop": false,
-    "importHelpers": false
-  }
-}

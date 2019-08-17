@@ -1,3 +1,5 @@
 coverage
 node_modules
 /index.js
+# Babel parse issue, ignore temporarily
+test/private-methods.ts
