@@ -1,5 +1,4 @@
 import _ from './json-strings'
-
 import { execute } from './helpers'
 
 const proposal = 'logical-assignment-operators'

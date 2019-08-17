@@ -1,12 +1,16 @@
 const box = {
   weight: 2,
-  getWeight() { return this.weight }
+  getWeight() {
+    return this.weight
+  },
 }
 
 const bigBox = { weight: 10 }
 
 // Can be chained:
-function add(this: number, val: number) { return this + val }
+function add(val: number) {
+  return this + val
+}
 
 export default () => {
   const result = []

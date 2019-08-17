@@ -1,5 +1,4 @@
 import _ from './optional-chaining'
-
 import { execute } from './helpers'
 
 const proposal = 'optional-chaining'
@@ -15,7 +14,13 @@ test(proposal, () => {
   ).toBe(undefined)
   expect(() =>
     _({
-      b: [{ c() {} }],
+      b: [
+        {
+          c() {
+            //
+          },
+        },
+      ],
     }),
   ).toThrowErrorMatchingSnapshot()
   expect(

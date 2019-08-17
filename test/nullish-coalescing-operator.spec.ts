@@ -1,5 +1,4 @@
 import _ from './nullish-coalescing-operator'
-
 import { execute } from './helpers'
 
 const proposal = 'nullish-coalescing-operator'

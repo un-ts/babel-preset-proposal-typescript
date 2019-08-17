@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`logical-assignment-operators 1`] = `"Unexpected token ,"`;
+exports[`logical-assignment-operators 1`] = `"Unexpected token )"`;

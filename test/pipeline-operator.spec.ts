@@ -1,5 +1,4 @@
 import _ from './pipeline-operator'
-
 import { execute } from './helpers'
 
 const proposal = 'pipeline-operator'

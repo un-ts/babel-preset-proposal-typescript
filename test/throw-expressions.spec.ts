@@ -1,5 +1,4 @@
 import _ from './throw-expressions'
-
 import { execute } from './helpers'
 
 const proposal = 'throw-expressions'

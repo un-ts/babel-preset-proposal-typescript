@@ -1,8 +1,8 @@
-function * adder(total?: number = 0) {
+function* adder(total?: number = 0) {
   let increment = 1
   let request
   do {
-    switch (request = function.sent) {
+    switch ((request = function.sent)) {
       case undefined:
         break
       case 'done':
@@ -10,7 +10,7 @@ function * adder(total?: number = 0) {
       default:
         increment = request
     }
-    yield total += increment
+    yield (total += increment)
   } while (true)
 }
 

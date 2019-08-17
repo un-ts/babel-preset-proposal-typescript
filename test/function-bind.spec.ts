@@ -1,5 +1,4 @@
 import _ from './function-bind'
-
 import { execute } from './helpers'
 
 const proposal = 'function-bind'

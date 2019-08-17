@@ -1,7 +1,6 @@
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
 import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
-
 import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
 import proposalFunctionBind from '@babel/plugin-proposal-function-bind'
 import proposalFunctionSent from '@babel/plugin-proposal-function-sent'

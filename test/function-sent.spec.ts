@@ -1,5 +1,4 @@
 import _ from './function-sent'
-
 import { execute } from './helpers'
 
 const proposal = 'function-sent'
