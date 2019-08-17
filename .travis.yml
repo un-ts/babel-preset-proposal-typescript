@@ -10,8 +10,21 @@ before_install:
 
 install: yarn --frozen-lockfile
 
-script: yarn test
+script:
+  - yarn test
+  - yarn lint
 
-after_script:
+after_success:
   - yarn global add codecov
   - codecov
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash deploy.sh
+  on:
+    branch: master
+
+after_script:
+  - yarn add -D @codechecks/client @codechecks/build-size-watcher
+  - yarn codechecks

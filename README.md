@@ -2,8 +2,8 @@
 
 [![Travis](https://img.shields.io/travis/com/JounQin/babel-preset-proposal-typescript.svg)](https://travis-ci.com/JounQin/babel-preset-proposal-typescript)
 [![Codecov](https://img.shields.io/codecov/c/github/JounQin/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/JounQin/babel-preset-proposal-typescript)
-[![David](https://img.shields.io/david/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript)
 [![David Peer](https://img.shields.io/david/peer/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=peer)
+[![David](https://img.shields.io/david/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript)
 [![David Dev](https://img.shields.io/david/dev/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=dev)
 
 Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.
@@ -50,9 +50,9 @@ babel input.ts --presets proposal-typescript > output.ts
 ### Via Node API
 
 ```js
-require("@babel/core").transform("code", {
-  presets: ["proposal-typescript"]
-});
+require('@babel/core').transform('code', {
+  presets: ['proposal-typescript'],
+})
 ```
 
 ### Via webpack
@@ -62,13 +62,16 @@ Pipe codes through `babel-loader` to `ts-loader` or `awesome-typescript-loader`.
 ```js
 loader = {
   test: /\.ts$/,
-  use: [{
-    loader: 'ts-loader'
-  }, {
-    loader: 'babel-loader',
-    options: {
-      presets: ['proposal-typescript']
-    }
-  }]
+  use: [
+    {
+      loader: 'ts-loader',
+    },
+    {
+      loader: 'babel-loader',
+      options: {
+        presets: ['proposal-typescript'],
+      },
+    },
+  ],
 }
 ```

@@ -3,16 +3,14 @@ const ts = require('typescript')
 
 module.exports = {
   process(src, path) {
-    if (path.endsWith('.ts')) {
-      return ts.transpile(
-        babel.transform(src, {
-          presets: ['proposal-typescript'],
-        }).code,
-        null,
-        path,
-        [],
-      )
-    }
-    return src
+    return path.endsWith('.ts')
+      ? ts.transpile(
+          babel.transform(src, {
+            presets: ['proposal-typescript'],
+          }).code,
+          null,
+          path,
+        )
+      : src
   },
 }
