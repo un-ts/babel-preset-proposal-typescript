@@ -1,1 +1,1 @@
-export default a => a?.b[0].c?.().d
+export default (a?) => a?.b[0].c?.().d
