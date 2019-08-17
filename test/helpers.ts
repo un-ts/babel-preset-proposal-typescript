@@ -9,7 +9,7 @@ const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 const read = (file: string): string =>
   fs.readFileSync(resolve(file) + '.ts').toString()
 
-const transpile = (content: string) => ts.transpile(content, null)
+const transpile = (content: string) => ts.transpile(content, null!)
 
-export const execute = (file: string, ...args) =>
+export const execute = (file: string, ...args: number[] | string[]) =>
   vm.runInNewContext(transpile(read(file)), { exports: {} })(...args)

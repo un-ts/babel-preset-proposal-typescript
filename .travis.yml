@@ -1,22 +1,17 @@
 language: node_js
 
-node_js: stable
+node_js: --lts
 
 cache: yarn
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
-  - yarn global add greenkeeper-lockfile
 
-before_script: greenkeeper-lockfile-update
+install: yarn --frozen-lockfile
 
-script:
-  - set -e
-  - yarn test
-  - yarn build
+script: yarn test
 
 after_script:
-  - greenkeeper-lockfile-upload
   - yarn global add codecov
-  - codecov -f coverage/*.json
+  - codecov

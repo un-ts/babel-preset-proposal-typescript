@@ -1,6 +1,6 @@
 {
+  "extends": "@1stg/tsconfig",
   "compilerOptions": {
-    "lib": ["esnext"],
-    "resolveJsonModule": true
+    "esModuleInterop": false
   }
 }

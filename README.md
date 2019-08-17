@@ -5,7 +5,6 @@
 [![David](https://img.shields.io/david/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript)
 [![David Peer](https://img.shields.io/david/peer/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=peer)
 [![David Dev](https://img.shields.io/david/dev/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=dev)
-[![Greenkeeper badge](https://badges.greenkeeper.io/JounQin/babel-preset-proposal-typescript.svg)](https://greenkeeper.io/)
 
 Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.
 

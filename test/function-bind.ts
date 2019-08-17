@@ -6,7 +6,7 @@ const box = {
 const bigBox = { weight: 10 }
 
 // Can be chained:
-function add(val) { return this + val }
+function add(this: number, val: number) { return this + val }
 
 export default () => {
   const result = []
