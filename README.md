@@ -94,8 +94,7 @@ loader = {
 
 ## Options
 
-| option             | description                         | defaults                         |
-| ------------------ | ----------------------------------- | -------------------------------- |
-| `legacyDecorators` | use legacy decorators semantic      | `true`                           |
-| `isTsx`            | enable `jsx` syntax for typescript  | `['.jsx', '.tsx'].includes(ext)` |
-| `pipelineOperator` | implementation of pipeline operator | `minimal`                        |
+| option             | description                         | defaults  |
+| ------------------ | ----------------------------------- | --------- |
+| `legacyDecorators` | use legacy decorators semantic      | `true`    |
+| `pipelineOperator` | implementation of pipeline operator | `minimal` |

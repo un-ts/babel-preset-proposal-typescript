@@ -8,6 +8,7 @@ module.exports = {
       ? ts.transpile(
           babel.transform(src, {
             presets: ['proposal-typescript'],
+            filename: path,
           }).code,
           null,
           path,

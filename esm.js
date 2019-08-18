@@ -1,5 +1,3 @@
-import path from 'path'
-
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
 import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
@@ -17,15 +15,10 @@ import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 import { declare } from '@babel/helper-plugin-utils'
 
-export default declare((api, opts, filename) => {
+export default declare((api, opts) => {
   api.assertVersion(7)
 
-  const ext = path.extname(filename)
-  const {
-    legacyDecorators = true,
-    isTsx = ['.jsx', '.tsx'].includes(ext),
-    pipelineOperator = 'minimal',
-  } = opts
+  const { legacyDecorators = true, pipelineOperator = 'minimal' } = opts
 
   return {
     plugins: [
@@ -36,12 +29,7 @@ export default declare((api, opts, filename) => {
         },
       ],
       syntaxDynamicImport,
-      [
-        syntaxTypeScript,
-        {
-          isTsx,
-        },
-      ],
+      syntaxTypeScript,
       proposalClassProperties,
       proposalDoExpressions,
       proposalFunctionBind,
@@ -59,6 +47,19 @@ export default declare((api, opts, filename) => {
       ],
       proposalPrivateMethods,
       proposalThrowExpression,
+    ],
+    overrides: [
+      {
+        test: /\.[jt]sx$/,
+        plugins: [
+          [
+            syntaxTypeScript,
+            {
+              isTSX: true,
+            },
+          ],
+        ],
+      },
     ],
   }
 })
