@@ -18,14 +18,14 @@ import { declare } from '@babel/helper-plugin-utils'
 export default declare((api, opts) => {
   api.assertVersion(7)
 
-  const { legacyDecorators = true, pipelineOperator = 'minimal' } = opts
+  const { decoratorsLegacy = true, pipelineOperator = 'minimal' } = opts
 
   return {
     plugins: [
       [
         syntaxDecorators,
         {
-          legacy: legacyDecorators,
+          legacy: decoratorsLegacy,
         },
       ],
       syntaxDynamicImport,
