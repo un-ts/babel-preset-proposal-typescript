@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "module": "esm.js",
   "repository": "git@github.com/JounQin/babel-preset-proposal-typescript.git",
@@ -31,6 +31,7 @@
     "typescript": "^3.0.0"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-do-expressions": "^7.5.0",
     "@babel/plugin-proposal-function-bind": "^7.0.0",
     "@babel/plugin-proposal-function-sent": "^7.5.0",
@@ -38,7 +39,9 @@
     "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-partial-application": "^7.4.4",
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "@babel/plugin-proposal-private-methods": "^7.4.4",
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-decorators": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
@@ -52,9 +55,6 @@
     "@1stg/prettier-config": "^0.1.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-partial-application": "^7.4.4",
-    "@babel/plugin-proposal-private-methods": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@commitlint/config-conventional": "^8.1.0",
     "@types/babel__core": "^7.1.2",
