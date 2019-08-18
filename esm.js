@@ -1,3 +1,5 @@
+import path from 'path'
+
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
 import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
@@ -13,33 +15,50 @@ import proposalPartialApplication from '@babel/plugin-proposal-partial-applicati
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
 import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
+import { declare } from '@babel/helper-plugin-utils'
 
-export default () => ({
-  plugins: [
-    [
-      syntaxDecorators,
-      {
-        legacy: true,
-      },
+export default declare((api, opts, filename) => {
+  api.assertVersion(7)
+
+  const ext = path.extname(filename)
+  const {
+    legacyDecorators = true,
+    isTsx = ['.jsx', '.tsx'].includes(ext),
+    pipelineOperator = 'minimal',
+  } = opts
+
+  return {
+    plugins: [
+      [
+        syntaxDecorators,
+        {
+          legacy: legacyDecorators,
+        },
+      ],
+      syntaxDynamicImport,
+      [
+        syntaxTypeScript,
+        {
+          isTsx,
+        },
+      ],
+      proposalClassProperties,
+      proposalDoExpressions,
+      proposalFunctionBind,
+      proposalFunctionSent,
+      proposalJsonStrings,
+      proposalLogicalAssignmentOperators,
+      proposalNullishCoalescingOperator,
+      proposalOptionalChaining,
+      proposalPartialApplication,
+      [
+        proposalPipelineOperator,
+        {
+          proposal: pipelineOperator,
+        },
+      ],
+      proposalPrivateMethods,
+      proposalThrowExpression,
     ],
-    syntaxDynamicImport,
-    syntaxTypeScript,
-    proposalClassProperties,
-    proposalDoExpressions,
-    proposalFunctionBind,
-    proposalFunctionSent,
-    proposalJsonStrings,
-    proposalLogicalAssignmentOperators,
-    proposalNullishCoalescingOperator,
-    proposalOptionalChaining,
-    proposalPartialApplication,
-    [
-      proposalPipelineOperator,
-      {
-        proposal: 'minimal',
-      },
-    ],
-    proposalPrivateMethods,
-    proposalThrowExpression,
-  ],
+  }
 })

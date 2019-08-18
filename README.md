@@ -10,6 +10,16 @@ Yet another Babel preset for TypeScript, only transforms proposals which TypeScr
 
 So that you can use babel to transform proposals which are current in stage 0-2 and TypeScript team [will not implement them temporarily](https://github.com/Microsoft/TypeScript/issues/19044#event-1293164503).
 
+- [babel-preset-proposal-typescript](#babel-preset-proposal-typescript)
+  - [Enabled proposal plugins](#enabled-proposal-plugins)
+  - [Install](#install)
+  - [Usage](#usage)
+    - [Via `.babelrc` (Recommended)](#via-babelrc-recommended)
+    - [Via CLI](#via-cli)
+    - [Via Node API](#via-node-api)
+    - [Via webpack](#via-webpack)
+  - [Options](#options)
+
 ## Enabled proposal plugins
 
 1. [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
@@ -81,3 +91,11 @@ loader = {
   ],
 }
 ```
+
+## Options
+
+| option             | description                         | defaults                         |
+| ------------------ | ----------------------------------- | -------------------------------- |
+| `legacyDecorators` | use legacy decorators semantic      | `true`                           |
+| `isTsx`            | enable `jsx` syntax for typescript  | `['.jsx', '.tsx'].includes(ext)` |
+| `pipelineOperator` | implementation of pipeline operator | `minimal`                        |
