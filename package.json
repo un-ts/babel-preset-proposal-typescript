@@ -51,7 +51,7 @@
   "devDependencies": {
     "@1stg/eslint-config": "^0.2.0",
     "@1stg/husky-config": "^0.1.0",
-    "@1stg/lint-staged": "^0.1.0",
+    "@1stg/lint-staged": "^0.2.0",
     "@1stg/prettier-config": "^0.1.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
