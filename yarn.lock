@@ -1951,8 +1951,24 @@ babel-preset-jest@^24.9.0:
     babel-plugin-jest-hoist "^24.9.0"
 
 "babel-preset-proposal-typescript@link:./.":
-  version "0.0.0"
-  uid ""
+  version "1.2.4"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-proposal-class-properties" "^7.5.5"
+    "@babel/plugin-proposal-do-expressions" "^7.5.0"
+    "@babel/plugin-proposal-function-bind" "^7.2.0"
+    "@babel/plugin-proposal-function-sent" "^7.5.0"
+    "@babel/plugin-proposal-json-strings" "^7.2.0"
+    "@babel/plugin-proposal-logical-assignment-operators" "^7.2.0"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
+    "@babel/plugin-proposal-optional-chaining" "^7.2.0"
+    "@babel/plugin-proposal-partial-application" "^7.4.4"
+    "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
+    "@babel/plugin-proposal-private-methods" "^7.4.4"
+    "@babel/plugin-proposal-throw-expressions" "^7.2.0"
+    "@babel/plugin-syntax-decorators" "^7.2.0"
+    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
+    "@babel/plugin-syntax-typescript" "^7.3.3"
 
 babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
@@ -2751,8 +2767,9 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-"eslint-import-resolver-typescript@github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts":
+eslint-import-resolver-typescript@JounQin/eslint-import-resolver-typescript#feat/resolve_dts:
   version "1.1.1"
+  uid "23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
   resolved "https://codeload.github.com/JounQin/eslint-import-resolver-typescript/tar.gz/23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
   dependencies:
     debug "^4.0.1"
