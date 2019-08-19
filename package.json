@@ -51,7 +51,7 @@
   "devDependencies": {
     "@1stg/eslint-config": "^0.2.0",
     "@1stg/husky-config": "^0.1.0",
-    "@1stg/lint-staged": "^0.1.0",
+    "@1stg/lint-staged": "^0.2.0",
     "@1stg/prettier-config": "^0.1.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -62,7 +62,7 @@
     "babel-eslint": "^11.0.0-beta.0",
     "babel-preset-proposal-typescript": "link:.",
     "commitlint": "^8.1.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.2.0",
     "eslint-formatter-friendly": "^7.0.0",
     "eslint-plugin-jest": "^22.15.1",
     "husky": "^3.0.4",
@@ -70,8 +70,5 @@
     "lint-staged": "^9.2.3",
     "prettier": "^1.18.2",
     "typescript": "^3.5.3"
-  },
-  "resolutions": {
-    "babel-eslint": "^11.0.0-beta.0"
   }
 }
