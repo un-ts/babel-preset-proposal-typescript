@@ -58,18 +58,20 @@ export default declare((api, opts) => {
       proposalThrowExpression,
     ],
     // no need to override if it has been enabled
-    overrides: !isTSX && [
-      {
-        test: /\.[jt]sx$/,
-        plugins: [
-          [
-            syntaxTypeScript,
-            {
-              isTSX: true,
-            },
-          ],
+    overrides: isTSX
+      ? undefined
+      : [
+          {
+            test: /\.[jt]sx$/,
+            plugins: [
+              [
+                syntaxTypeScript,
+                {
+                  isTSX: true,
+                },
+              ],
+            ],
+          },
         ],
-      },
-    ],
   }
 })
