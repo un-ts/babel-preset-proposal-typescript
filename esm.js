@@ -18,7 +18,11 @@ import { declare } from '@babel/helper-plugin-utils'
 export default declare((api, opts) => {
   api.assertVersion(7)
 
-  const { decoratorsLegacy = true, pipelineOperator = 'minimal' } = opts
+  const {
+    decoratorsLegacy = true,
+    isTSX = false,
+    pipelineOperator = 'minimal',
+  } = opts
 
   return {
     plugins: [
@@ -29,7 +33,12 @@ export default declare((api, opts) => {
         },
       ],
       syntaxDynamicImport,
-      syntaxTypeScript,
+      [
+        syntaxTypeScript,
+        {
+          isTSX,
+        },
+      ],
       proposalClassProperties,
       proposalDoExpressions,
       proposalFunctionBind,
@@ -48,7 +57,8 @@ export default declare((api, opts) => {
       proposalPrivateMethods,
       proposalThrowExpression,
     ],
-    overrides: [
+    // no need to override if it has been enabled
+    overrides: !isTSX && [
       {
         test: /\.[jt]sx$/,
         plugins: [

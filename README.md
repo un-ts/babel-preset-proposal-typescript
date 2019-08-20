@@ -10,6 +10,9 @@ Yet another Babel preset for TypeScript, only transforms proposals which TypeScr
 
 So that you can use babel to transform proposals which are current in stage 0-2 and TypeScript team [will not implement them temporarily](https://github.com/Microsoft/TypeScript/issues/19044#event-1293164503).
 
+## TOC
+
+- [TOC](#toc)
 - [Enabled proposal plugins](#enabled-proposal-plugins)
 - [Install](#install)
 - [Usage](#usage)
@@ -93,7 +96,8 @@ loader = {
 
 ## Options
 
-| option             | description                               | defaults    |
-| ------------------ | ----------------------------------------- | ----------- |
-| `decoratorsLegacy` | whether to use legacy decorators semantic | `true`      |
-| `pipelineOperator` | implementation of pipeline operator       | `"minimal"` |
+| option             | description                                      | defaults                        |
+| ------------------ | ------------------------------------------------ | ------------------------------- |
+| `decoratorsLegacy` | whether to use legacy decorators semantic        | `true`                          |
+| `isTSX`            | whether to enable `jsx` plugin with `typescript` | `false`, `true for /\.[jt]sx$/` |
+| `pipelineOperator` | implementation of pipeline operator              | `"minimal"`                     |

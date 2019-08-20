@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "module": "esm.js",
   "repository": "git@github.com/JounQin/babel-preset-proposal-typescript.git",
@@ -49,7 +49,7 @@
     "@babel/plugin-syntax-typescript": "^7.3.3"
   },
   "devDependencies": {
-    "@1stg/eslint-config": "^0.2.0",
+    "@1stg/eslint-config": "^0.2.1",
     "@1stg/husky-config": "^0.1.0",
     "@1stg/lint-staged": "^0.2.0",
     "@1stg/prettier-config": "^0.1.0",
@@ -58,11 +58,11 @@
     "@babel/preset-env": "^7.5.5",
     "@commitlint/config-conventional": "^8.1.0",
     "@types/babel__core": "^7.1.2",
-    "@types/jest": "^24.0.17",
+    "@types/jest": "^24.0.18",
     "babel-eslint": "^11.0.0-beta.0",
-    "babel-preset-proposal-typescript": "link:.",
+    "babel-preset-proposal-typescript": "link:./.",
     "commitlint": "^8.1.0",
-    "eslint": "^6.2.0",
+    "eslint": "^6.2.1",
     "eslint-formatter-friendly": "^7.0.0",
     "eslint-plugin-jest": "^22.15.1",
     "husky": "^3.0.4",
