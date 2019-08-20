@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/JounQin/babel-preset-proposal-typescript/compare/v1.2.5...v1.2.6) (2019-08-20)
+
+
+### Bug Fixes
+
+* incorrect type of overrides ([d86062a](https://github.com/JounQin/babel-preset-proposal-typescript/commit/d86062a))
+
 ### [1.2.5](https://github.com/JounQin/babel-preset-proposal-typescript/compare/v1.2.4...v1.2.5) (2019-08-20)
 
 
