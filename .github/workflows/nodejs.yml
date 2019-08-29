@@ -1,0 +1,30 @@
+name: Node CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [8.x, 10.x, 12.x]
+        os: [macOS-latest, ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node: ${{ matrix.node }}
+      - name: setup yarn
+        run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash
+          export PATH="$HOME/.yarn/bin:$PATH"
+      - name: build, lint, test
+        run: |
+          yarn --frozen-lockfile
+          yarn test
+          yarn lint
+        env:
+          CI: true
