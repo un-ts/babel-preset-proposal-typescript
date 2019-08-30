@@ -1,10 +1,10 @@
 # babel-preset-proposal-typescript
 
-[![Travis](https://img.shields.io/travis/com/JounQin/babel-preset-proposal-typescript.svg)](https://travis-ci.com/JounQin/babel-preset-proposal-typescript)
-[![Codecov](https://img.shields.io/codecov/c/github/JounQin/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/JounQin/babel-preset-proposal-typescript)
-[![David Peer](https://img.shields.io/david/peer/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=peer)
-[![David](https://img.shields.io/david/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript)
-[![David Dev](https://img.shields.io/david/dev/JounQin/babel-preset-proposal-typescript.svg)](https://david-dm.org/JounQin/babel-preset-proposal-typescript?type=dev)
+[![Travis](https://img.shields.io/travis/com/rx-ts/babel-preset-proposal-typescript.svg)](https://travis-ci.com/rx-ts/babel-preset-proposal-typescript)
+[![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
+[![David Peer](https://img.shields.io/david/peer/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=peer)
+[![David](https://img.shields.io/david/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript)
+[![David Dev](https://img.shields.io/david/dev/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=dev)
 
 Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.
 

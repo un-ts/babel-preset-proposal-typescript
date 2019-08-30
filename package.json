@@ -3,7 +3,7 @@
   "version": "1.2.6",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "module": "esm.js",
-  "repository": "git@github.com/JounQin/babel-preset-proposal-typescript.git",
+  "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "scripts": {
