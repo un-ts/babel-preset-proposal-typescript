@@ -1,7 +1,7 @@
 import _ from './json-strings'
 import { execute } from './helpers'
 
-const proposal = 'logical-assignment-operators'
+const proposal = 'json-strings'
 
 test(proposal, () => {
   expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()

@@ -6,7 +6,7 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     babelOptions: {
-      configFile: resolve('babel.js'),
+      configFile: resolve('.babelrc.js'),
     },
   },
   settings: {
@@ -23,12 +23,6 @@ module.exports = {
     {
       files: '*.{js,ts}',
       ...js,
-    },
-    {
-      files: '*.ts',
-      rules: {
-        'import/namespace': 0,
-      },
     },
     jest,
   ],

@@ -1,6 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.ts$': '<rootDir>/test/preprocessor.js',
+    '^.+\\.[t|j]sx?$': 'babel-jest',
   },
   collectCoverage: true,
 }
