@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@1stg/eslint-config@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.3.1.tgz#2efd719ac5b4814bb1777f6a690574ee845ab8ea"
-  integrity sha512-hhnhrgPFdFcpJMLzlyyBfjQ263surXDveSXv8YKKaM2md7cpcSBd/Gpfo1SFro1xr2tCUUzKQQG0USHDCNOiiw==
+"@1stg/eslint-config@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@1stg/eslint-config/-/eslint-config-0.6.0.tgz#b90645d58424ba2175b107da90d8ef2e8cd2a18f"
+  integrity sha512-ICYqp7R+1gXNbGiEPSrY1NO1xoQm5dx3RoYQXVLNEjR3m4XqG+Mlrs+HVgfKjhX7zjMrDZjl6VHnOw6SzZGIkw==
   dependencies:
-    "@1stg/prettier-config" "^0.1.0"
-    "@1stg/tsconfig" "^0.1.0"
     "@typescript-eslint/eslint-plugin" "^2.0.0"
     "@typescript-eslint/eslint-plugin-tslint" "^2.0.0"
     "@typescript-eslint/parser" "^2.0.0"
     babel-eslint "^11.0.0-beta.0"
     eslint-config-prettier "^6.1.0"
     eslint-config-standard "^14.1.0"
-    eslint-import-resolver-typescript JounQin/eslint-import-resolver-typescript#feat/resolve_dts
+    eslint-config-standard-jsx "^8.1.0"
+    eslint-config-standard-react "^9.1.0"
+    eslint-import-resolver-typescript "github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts"
     eslint-plugin-babel "^5.3.0"
     eslint-plugin-import "^2.18.2"
     eslint-plugin-jest "^22.16.0"
@@ -38,20 +38,10 @@
   resolved "https://registry.yarnpkg.com/@1stg/lint-staged/-/lint-staged-0.4.2.tgz#06c4a0ce5620eea8e690be97e8fc52527f305d75"
   integrity sha512-IIfQ7tyslwsQ9vg8a5e3qJoTGs9324e4FPXkHG1i3pBJYA+JV82CyNPftQMgGMaZWDK3hPjLHOtIPWCQvvWfBA==
 
-"@1stg/prettier-config@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@1stg/prettier-config/-/prettier-config-0.1.1.tgz#15a7ca7e27d9545e8adf006c8157abdaba3cce8e"
-  integrity sha512-JoHDYcwqkx3LlxH3vYWBRAPupYSdX+5hQsWFgNaLeDWVdXVr64urS/MrlcxLpWiQXFXZgtQrSqoSSGkX5kiTkA==
-
 "@1stg/prettier-config@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@1stg/prettier-config/-/prettier-config-0.2.0.tgz#853c1142834f31d9287cd9e30f2b91d46e4961d6"
   integrity sha512-wL0qdfsJyHQvOO0vG50StqTSIOX9kauhu6NbLHMgAXE+s3rQ4/N0slwAwYCrqHSwYRVqpeqN8EblYF6UIZiwZQ==
-
-"@1stg/tsconfig@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@1stg/tsconfig/-/tsconfig-0.1.1.tgz#b7cfe5b3889d700f660087cf8eea20cfa6543068"
-  integrity sha512-ZBTl/pr0h9MGZppAMIEN8BjJdIrYv3GSjcLgHRSn48uC5otyT61BkZ8BwYQf+tIY5jOFbI0i0Y2wgHxkxXZphQ==
 
 "@babel/cli@^7.5.5":
   version "7.5.5"
@@ -2764,6 +2754,18 @@ eslint-config-prettier@^6.1.0:
   dependencies:
     get-stdin "^6.0.0"
 
+eslint-config-standard-jsx@^8.0.0, eslint-config-standard-jsx@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard-jsx/-/eslint-config-standard-jsx-8.1.0.tgz#314c62a0e6f51f75547f89aade059bec140edfc7"
+  integrity sha512-ULVC8qH8qCqbU792ZOO6DaiaZyHNS/5CZt3hKqHkEhVlhPEPN3nfBqqxJCyp59XrjIBZPu1chMYe9T2DXZ7TMw==
+
+eslint-config-standard-react@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-9.1.0.tgz#6f08368db869064548846a851c3d6d72391268f9"
+  integrity sha512-CCJcGPtpGv29+ntl8OMc3I77Z36xZLIFopXR18i8omAVZko5MSruEXreGzGlnzbvPI5dCMCwt5xGN5djUqoGWw==
+  dependencies:
+    eslint-config-standard-jsx "^8.0.0"
+
 eslint-config-standard@^14.1.0:
   version "14.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-14.1.0.tgz#b23da2b76fe5a2eba668374f246454e7058f15d4"
@@ -2788,7 +2790,7 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-eslint-import-resolver-typescript@JounQin/eslint-import-resolver-typescript#feat/resolve_dts:
+"eslint-import-resolver-typescript@github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts":
   version "1.1.1"
   uid "23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
   resolved "https://codeload.github.com/JounQin/eslint-import-resolver-typescript/tar.gz/23e2e8cf71ee6c19da9f55e85b2ab34543d2a12e"
