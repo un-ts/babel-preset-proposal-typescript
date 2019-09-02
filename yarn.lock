@@ -33,10 +33,10 @@
   resolved "https://registry.yarnpkg.com/@1stg/husky-config/-/husky-config-0.3.0.tgz#dcf89d1f791dfd04d8d1a3fc1b59ba97c57ed6be"
   integrity sha512-YKVLG5lc/qKPyY9by/mVPdZLMe3s1FuO1d0mCmCogYl6VTWW/98LW80B4pMcDTmHPBTjZfKUAwgVBIvaYVthBA==
 
-"@1stg/lint-staged@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@1stg/lint-staged/-/lint-staged-0.4.2.tgz#06c4a0ce5620eea8e690be97e8fc52527f305d75"
-  integrity sha512-IIfQ7tyslwsQ9vg8a5e3qJoTGs9324e4FPXkHG1i3pBJYA+JV82CyNPftQMgGMaZWDK3hPjLHOtIPWCQvvWfBA==
+"@1stg/lint-staged@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@1stg/lint-staged/-/lint-staged-0.4.3.tgz#bb3515eb09d76727577bca8af84d7bbf4215fee6"
+  integrity sha512-5HNBI0uVmvwa4qZCY/emVgE2Et5J3im+XqQ7hwR5dmDGJCqwlTV2uFvQNhMGoAe+ac1MAV3gQ//wXG+1itPVoQ==
 
 "@1stg/prettier-config@^0.1.0":
   version "0.1.1"
