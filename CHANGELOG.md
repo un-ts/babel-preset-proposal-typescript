@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.2.6...v1.3.0) (2019-09-03)
+
+
+### Features
+
+* add cjs/esm/es2015 bundle via @1stg/rollup-config ([93e4786](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/93e4786))
+
 ### [1.2.6](https://github.com/JounQin/babel-preset-proposal-typescript/compare/v1.2.5...v1.2.6) (2019-08-20)
 
 
