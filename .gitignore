@@ -1,4 +1,6 @@
 *.log
 coverage
 node_modules
-/index.js
+/cjs.js
+/es2015.js
+/esm.js

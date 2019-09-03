@@ -1,13 +1,15 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.2.6",
+  "version": "1.3.0",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
-  "module": "esm.js",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
+  "main": "cjs.js",
+  "module": "esm.js",
+  "es2015": "es2015.js",
   "scripts": {
-    "build": "babel --no-babelrc --presets @babel/env esm.js > index.js",
+    "build": "rollup -c",
     "lint": "EFF_NO_LINK_RULES=true eslint . --ext .js,.ts -f friendly",
     "pretest": "yarn build",
     "test": "jest",
@@ -23,8 +25,9 @@
     "typescript"
   ],
   "files": [
+    "cjs.js",
     "esm.js",
-    "index.js"
+    "es2015.js"
   ],
   "peerDependencies": {
     "@babel/core": "^7.0.0",
@@ -53,6 +56,7 @@
     "@1stg/husky-config": "^0.3.0",
     "@1stg/lint-staged": "^0.5.0",
     "@1stg/prettier-config": "^0.2.0",
+    "@1stg/rollup-config": "^0.3.0",
     "@1stg/tsconfig": "^0.3.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -71,6 +75,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
+    "rollup": "^1.20.3",
     "typescript": "^3.6.2"
   }
 }

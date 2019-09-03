@@ -1,6 +1,5 @@
 module.exports = {
   presets: [
-    'proposal-typescript',
     [
       '@babel/env',
       {
@@ -10,5 +9,6 @@ module.exports = {
       },
     ],
     '@babel/typescript',
+    'proposal-typescript',
   ],
 }

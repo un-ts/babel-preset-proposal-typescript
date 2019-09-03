@@ -1,14 +1,10 @@
 const { resolve } = require('path')
-const { jest, js } = require('@1stg/eslint-config/overrides')
+const { dTs, jest, js, ts } = require('@1stg/eslint-config/overrides')
+const { merge } = require('lodash')
 
 module.exports = {
   extends: ['@1stg', 'plugin:import/typescript'],
   parser: 'babel-eslint',
-  parserOptions: {
-    babelOptions: {
-      configFile: resolve('.babelrc.js'),
-    },
-  },
   settings: {
     'import/ignore': [/test\/private-methods.ts$/],
     'import/parsers': {
@@ -21,9 +17,20 @@ module.exports = {
   },
   overrides: [
     {
-      files: '*.{js,ts}',
       ...js,
+      files: '*.{js,ts}',
     },
+    merge({}, ts, dTs, {
+      files: '*.d.ts',
+      rules: {
+        'prettier/prettier': [
+          2,
+          {
+            parser: 'typescript',
+          },
+        ],
+      },
+    }),
     jest,
   ],
 }

@@ -1,5 +1,7 @@
 coverage
 node_modules
-/index.js
+/cjs.js
+/es2015.js
+/esm.js
 # Babel parse issue, ignore temporarily
 test/private-methods.ts
