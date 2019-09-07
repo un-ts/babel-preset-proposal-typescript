@@ -1,5 +1,2 @@
-coverage
-node_modules
-CHANGELOG.md
 # Not supported by Prettier yet
 test/partial-application.ts
