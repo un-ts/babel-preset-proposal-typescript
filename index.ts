@@ -15,6 +15,8 @@ import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 import { declare } from '@babel/helper-plugin-utils'
 
+import syntaxV8intrinsic from './v8intrinsic'
+
 export default declare((api, opts) => {
   api.assertVersion(7)
 
@@ -39,6 +41,7 @@ export default declare((api, opts) => {
           isTSX,
         },
       ],
+      syntaxV8intrinsic,
       proposalClassProperties,
       proposalDoExpressions,
       proposalFunctionBind,

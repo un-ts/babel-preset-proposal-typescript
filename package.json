@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
@@ -13,7 +13,7 @@
   "es2015": "es2015.js",
   "scripts": {
     "build": "rollup -c node_modules/@1stg/rollup-config/module.js",
-    "lint": "EFF_NO_LINK_RULES=true eslint . --ext .js,.ts -f friendly",
+    "lint": "EFF_NO_LINK_RULES=true eslint . --ext js,md,ts -f friendly",
     "pretest": "yarn build",
     "test": "jest",
     "prepublishOnly": "yarn test"
@@ -64,6 +64,7 @@
     "@1stg/tsconfig": "^0.5.0",
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
+    "@babel/parser": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-typescript": "^7.6.0",
     "@commitlint/cli": "^8.1.0",
@@ -80,6 +81,7 @@
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "rollup": "^1.20.3",
+    "tempy": "^0.3.0",
     "typescript": "^3.6.2"
   }
 }

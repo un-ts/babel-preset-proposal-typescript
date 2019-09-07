@@ -3,6 +3,7 @@ module.exports = {
     '^.+\\.[jt]s$': 'babel-jest',
   },
   collectCoverage: true,
+  collectCoverageFrom: ['test'],
   coverageThreshold: {
     global: {
       branches: 100,

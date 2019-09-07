@@ -4,9 +4,10 @@ import * as vm from 'vm'
 
 import * as ts from 'typescript'
 
-const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
+export const resolve = (...args: string[]): string =>
+  path.resolve(__dirname, ...args)
 
-const read = (file: string): string =>
+export const read = (file: string): string =>
   fs.readFileSync(resolve(file) + '.ts').toString()
 
 const transpile = (content: string) => ts.transpile(content)
