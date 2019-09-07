@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.3.0...v1.4.0) (2019-09-07)
+
+
+### Bug Fixes
+
+* **deps:** bump babel which supports private static accessors ([eb1880d](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/eb1880d))
+
+
+### Features
+
+* enable v8intrinsic plugin ([7f83401](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/7f83401))
+
 ## [1.3.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.2.6...v1.3.0) (2019-09-03)
 
 
