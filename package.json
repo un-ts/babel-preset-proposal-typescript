@@ -80,7 +80,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
-    "rollup": "^1.20.3",
+    "rollup": "^1.21.0",
     "tempy": "^0.3.0",
     "typescript": "^3.6.2"
   }
