@@ -2,4 +2,4 @@ checks:
   - name: build-size-watcher
     options:
       files:
-        - path: index.js
+        - path: lib/*.*

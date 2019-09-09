@@ -1,8 +1,6 @@
 coverage
+lib
 node_modules
-/cjs.js
-/es2015.js
-/esm.js
-/CHANGELOG.md
+CHANGELOG.md
 # babel-eslint parse issue, ignore temporarily
 test/private-methods.ts
