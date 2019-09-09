@@ -17,9 +17,6 @@ module.exports = {
     {
       ...js,
       files: '*.{js,ts}',
-      rules: {
-        'node/no-unsupported-features/es-syntax': 0,
-      },
     },
     jest,
     md,
