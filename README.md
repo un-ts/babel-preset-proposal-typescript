@@ -2,6 +2,7 @@
 
 [![Travis](https://img.shields.io/travis/com/rx-ts/babel-preset-proposal-typescript.svg)](https://travis-ci.com/rx-ts/babel-preset-proposal-typescript)
 [![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
+[![Codacy Grade](https://img.shields.io/codacy/grade/53177b35c7a1440184d819836ea7a5ed)](https://www.codacy.com/app/JounQin/babel-preset-proposal-typescript)
 [![David Peer](https://img.shields.io/david/peer/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=peer)
 [![David](https://img.shields.io/david/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript)
 [![David Dev](https://img.shields.io/david/dev/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=dev)

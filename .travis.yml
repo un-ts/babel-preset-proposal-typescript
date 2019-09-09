@@ -28,5 +28,6 @@ deploy:
     branch: master
 
 after_script:
-  - yarn add -D @codechecks/client @codechecks/build-size-watcher
+  - yarn add -D @codechecks/client @codechecks/build-size-watcher @codechecks/type-coverage-watcher codacy-coverage
   - yarn codechecks
+  - cat ./coverage/lcov.info | yarn codacy-coverage

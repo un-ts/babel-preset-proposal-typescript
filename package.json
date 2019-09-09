@@ -16,7 +16,8 @@
     "lint": "EFF_NO_LINK_RULES=true eslint . --ext js,md,ts -f friendly",
     "pretest": "yarn build",
     "test": "jest",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "postinstall": "bash postinstall.sh || exit 0"
   },
   "keywords": [
     "babel-preset",
@@ -81,7 +82,6 @@
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
     "rollup": "^1.21.0",
-    "tempy": "^0.3.0",
     "typescript": "^3.6.2"
   }
 }

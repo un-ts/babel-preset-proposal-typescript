@@ -1,5 +1,5 @@
 const { resolve } = require('path')
-const { dTs, jest, js, ts, md } = require('@1stg/eslint-config/overrides')
+const { jest, js, ts, md } = require('@1stg/eslint-config/overrides')
 const { merge } = require('lodash')
 
 module.exports = {
@@ -17,18 +17,10 @@ module.exports = {
     {
       ...js,
       files: '*.{js,ts}',
-    },
-    merge({}, ts, dTs, {
-      files: '*.d.ts',
       rules: {
-        'prettier/prettier': [
-          2,
-          {
-            parser: 'typescript',
-          },
-        ],
+        'node/no-unsupported-features/es-syntax': 0,
       },
-    }),
+    },
     jest,
     md,
   ],

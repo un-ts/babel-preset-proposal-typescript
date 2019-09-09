@@ -1,6 +1,6 @@
+/* istanbul ignore next */
 function fn() {
   // do nothing
 }
-
-// eslint-disable-next-line babel/new-cap
+/* istanbul ignore next */
 process.stdout.write(String(%GetOptimizationStatus(fn)))
