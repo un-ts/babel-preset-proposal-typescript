@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.0...v1.4.1) (2019-09-09)
+
+
+### Bug Fixes
+
+* **test:** code coverage issue, remove unnecessary tempy dep ([71b6765](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/71b6765))
+
 ## [1.4.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.3.0...v1.4.0) (2019-09-07)
 
 
