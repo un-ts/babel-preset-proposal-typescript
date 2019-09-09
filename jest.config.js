@@ -1,6 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.[jt]s$': 'babel-jest',
+    '^.+\\.(m?j|t)s$': 'babel-jest',
   },
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/test/**/*.ts'],

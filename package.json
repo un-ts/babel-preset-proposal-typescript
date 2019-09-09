@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
@@ -8,16 +8,16 @@
   "engines": {
     "node": ">=6.9.0"
   },
-  "main": "cjs.js",
-  "module": "esm.js",
-  "es2015": "es2015.js",
+  "main": "lib/cjs.js",
+  "module": "lib/esm.js",
+  "es2015": "lib/es2015.js",
   "scripts": {
     "build": "rollup -c node_modules/@1stg/rollup-config/module.js",
     "lint": "EFF_NO_LINK_RULES=true eslint . --ext js,md,ts -f friendly",
     "pretest": "yarn build",
     "test": "jest",
     "prepublishOnly": "yarn test",
-    "postinstall": "bash postinstall.sh || exit 0"
+    "postinstall": "bash scripts/postinstall.sh || exit 0"
   },
   "keywords": [
     "babel-preset",
@@ -29,9 +29,7 @@
     "typescript"
   ],
   "files": [
-    "cjs.js",
-    "esm.js",
-    "es2015.js"
+    "lib"
   ],
   "peerDependencies": {
     "@babel/core": "^7.6.0",
@@ -56,12 +54,12 @@
     "@babel/plugin-syntax-typescript": "^7.3.3"
   },
   "devDependencies": {
-    "@1stg/eslint-config": "^0.9.1",
+    "@1stg/eslint-config": "^0.9.2",
     "@1stg/husky-config": "^0.3.0",
     "@1stg/lint-staged": "^0.6.0",
     "@1stg/prettier-config": "^0.2.0",
     "@1stg/remark-config": "^0.2.1",
-    "@1stg/rollup-config": "^0.7.0",
+    "@1stg/rollup-config": "^0.8.0",
     "@1stg/tsconfig": "^0.5.0",
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
@@ -81,7 +79,7 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
-    "rollup": "^1.21.0",
+    "rollup": "^1.21.2",
     "typescript": "^3.6.2"
   }
 }

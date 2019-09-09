@@ -23,7 +23,7 @@ after_success:
 deploy:
   provider: script
   skip_cleanup: true
-  script: bash deploy.sh
+  script: bash scripts/deploy.sh
   on:
     branch: master
 
