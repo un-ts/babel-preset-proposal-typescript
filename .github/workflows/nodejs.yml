@@ -34,8 +34,9 @@ jobs:
       - name: Report Test Code Coverage
         if: matrix.node == '12.x'
         run: |
-          yarn global add codecov
+          yarn global add codecov codacy-coverage
           codecov
+          cat ./coverage/lcov.info | codacy-coverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
