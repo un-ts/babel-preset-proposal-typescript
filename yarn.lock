@@ -55,10 +55,10 @@
     remark-preset-lint-recommended "^3.0.3"
     remark-preset-prettier "^0.2.0"
 
-"@1stg/rollup-config@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@1stg/rollup-config/-/rollup-config-0.9.3.tgz#699ee735470f77e565efa8fa22b80815499591b3"
-  integrity sha512-hXetxPOTYlASn4svC8iCOvtDTQtbAh3B5Tt8uolMT8AOlqdvXSpxBZ0JXhDVqLBHJN5ccSzLZppQPE8VWM+0fQ==
+"@1stg/rollup-config@^0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@1stg/rollup-config/-/rollup-config-0.9.4.tgz#8a8768cf85782909c6695c4c3b939c63aeab8108"
+  integrity sha512-wGVBRx+mwgjJFVarjIWyKQ823hi10W5YcsyUbjvsBN9og6vs0qd9EsfS30QVYrQgWgc8+bhHi2nvJmvVxRCgNw==
   dependencies:
     "@babel/preset-env" "^7.6.0"
     builtin-modules "^3.1.0"
@@ -69,7 +69,7 @@
     rollup-plugin-json "^4.0.0"
     rollup-plugin-node-resolve "^5.2.0"
     rollup-plugin-replace "^2.2.0"
-    rollup-plugin-terser "^5.1.1"
+    rollup-plugin-terser "^5.1.2"
     rollup-plugin-typescript "^1.0.1"
     umd-globals "^0.3.0"
 
@@ -2027,8 +2027,24 @@ babel-preset-jest@^24.9.0:
     babel-plugin-jest-hoist "^24.9.0"
 
 "babel-preset-proposal-typescript@link:./.":
-  version "0.0.0"
-  uid ""
+  version "1.4.1"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-proposal-class-properties" "^7.5.5"
+    "@babel/plugin-proposal-do-expressions" "^7.6.0"
+    "@babel/plugin-proposal-function-bind" "^7.2.0"
+    "@babel/plugin-proposal-function-sent" "^7.5.0"
+    "@babel/plugin-proposal-json-strings" "^7.2.0"
+    "@babel/plugin-proposal-logical-assignment-operators" "^7.2.0"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
+    "@babel/plugin-proposal-optional-chaining" "^7.6.0"
+    "@babel/plugin-proposal-partial-application" "^7.4.4"
+    "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
+    "@babel/plugin-proposal-private-methods" "^7.6.0"
+    "@babel/plugin-proposal-throw-expressions" "^7.2.0"
+    "@babel/plugin-syntax-decorators" "^7.2.0"
+    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
+    "@babel/plugin-syntax-typescript" "^7.3.3"
 
 babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
@@ -6928,10 +6944,10 @@ rollup-plugin-replace@^2.2.0:
     magic-string "^0.25.2"
     rollup-pluginutils "^2.6.0"
 
-rollup-plugin-terser@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.1.1.tgz#e9d2545ec8d467f96ba99b9216d2285aad8d5b66"
-  integrity sha512-McIMCDEY8EU6Y839C09UopeRR56wXHGdvKKjlfiZG/GrP6wvZQ62u2ko/Xh1MNH2M9WDL+obAAHySljIZYCuPQ==
+rollup-plugin-terser@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.1.2.tgz#3e41256205cb75f196fc70d4634227d1002c255c"
+  integrity sha512-sWKBCOS+vUkRtHtEiJPAf+WnBqk/C402fBD9AVHxSIXMqjsY7MnYWKYEUqGixtr0c8+1DjzUEPlNgOYQPVrS1g==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     jest-worker "^24.6.0"
