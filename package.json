@@ -33,7 +33,7 @@
   ],
   "peerDependencies": {
     "@babel/core": "^7.6.0",
-    "typescript": "^3.0.0"
+    "typescript": "^3.6.3"
   },
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.0.0",
