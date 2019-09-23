@@ -59,7 +59,7 @@
     "@1stg/lint-staged": "^0.6.0",
     "@1stg/prettier-config": "^0.2.0",
     "@1stg/remark-config": "^0.2.1",
-    "@1stg/rollup-config": "^0.9.4",
+    "@1stg/rollup-config": "^0.9.5",
     "@1stg/tsconfig": "^0.5.1",
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
