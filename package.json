@@ -32,7 +32,7 @@
     "lib"
   ],
   "peerDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.6.2",
     "typescript": "^3.6.3"
   },
   "dependencies": {
@@ -61,10 +61,10 @@
     "@1stg/remark-config": "^0.2.1",
     "@1stg/rollup-config": "^0.9.5",
     "@1stg/tsconfig": "^0.5.1",
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/parser": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/parser": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-typescript": "^7.6.0",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
