@@ -1,5 +1,5 @@
 const { resolve } = require('path')
-const { jest, js, ts, md } = require('@1stg/eslint-config/overrides')
+const { jest, js, test, ts, mdx } = require('@1stg/eslint-config/overrides')
 const { merge } = require('lodash')
 
 module.exports = {
@@ -19,6 +19,7 @@ module.exports = {
       files: '*.{js,ts}',
     },
     jest,
-    md,
+    mdx,
+    test,
   ],
 }

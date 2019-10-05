@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`v8intrinsic 1`] = `"Unexpected token %"`;
+exports[`v8intrinsic 1`] = `"Unexpected token '%'"`;
 
-exports[`v8intrinsic 2`] = `"Unexpected token %"`;
+exports[`v8intrinsic 2`] = `"Unexpected token '%'"`;

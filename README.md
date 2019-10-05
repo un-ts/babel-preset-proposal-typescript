@@ -71,7 +71,7 @@ npm i -D babel-preset-proposal-typescript
 ### Via CLI
 
 ```sh
-babel input.ts --presets proposal-typescript > output.ts
+babel input.ts --presets proposal-typescript >output.ts
 ```
 
 ### Via Node API
