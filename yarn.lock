@@ -55,10 +55,10 @@
     remark-preset-lint-recommended "^3.0.3"
     remark-preset-prettier "^0.2.0"
 
-"@1stg/rollup-config@^0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@1stg/rollup-config/-/rollup-config-0.9.5.tgz#c918cad1ca8687773168f5159deafc66dbd3e074"
-  integrity sha512-7w1nrfmAI0dPlv3dVG7p3RlOLrXvimEZ/hppwdCx43NM4vzFbrMGkBQVwClQkZJJp6FEBqSailozdduYNbWbVA==
+"@1stg/rollup-config@^0.9.7":
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/@1stg/rollup-config/-/rollup-config-0.9.7.tgz#b74c8e249e7342cad1c6eee6f3c23f69f185e543"
+  integrity sha512-XLFkx4XIjrZc/br1KZrXCXKP7mMV0AYkZ2DPBuzbLY5vEnff0w6+7hm0RJgiNOrJzyOUb4vTB/O50kbEJab0rA==
   dependencies:
     "@babel/preset-env" "^7.6.0"
     builtin-modules "^3.1.0"
@@ -2031,25 +2031,8 @@ babel-preset-jest@^24.9.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.9.0"
 
-"babel-preset-proposal-typescript@link:./.":
-  version "1.4.1"
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-proposal-class-properties" "^7.5.5"
-    "@babel/plugin-proposal-do-expressions" "^7.6.0"
-    "@babel/plugin-proposal-function-bind" "^7.2.0"
-    "@babel/plugin-proposal-function-sent" "^7.5.0"
-    "@babel/plugin-proposal-json-strings" "^7.2.0"
-    "@babel/plugin-proposal-logical-assignment-operators" "^7.2.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
-    "@babel/plugin-proposal-optional-chaining" "^7.6.0"
-    "@babel/plugin-proposal-partial-application" "^7.4.4"
-    "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
-    "@babel/plugin-proposal-private-methods" "^7.6.0"
-    "@babel/plugin-proposal-throw-expressions" "^7.2.0"
-    "@babel/plugin-syntax-decorators" "^7.2.0"
-    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@babel/plugin-syntax-typescript" "^7.3.3"
+"babel-preset-proposal-typescript@link:.":
+  version "0.0.0"
 
 babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
