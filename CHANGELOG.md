@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.2...v1.4.3) (2019-10-09)
+
+
+### Bug Fixes
+
+* add decoratorsBeforeExport options for decorators ([1b84269](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/1b84269d54bbf72b10322d2c07155ea8b128a546))
+
 ### [1.4.2](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.1...v1.4.2) (2019-10-09)
 
 
