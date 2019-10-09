@@ -21,8 +21,9 @@ export default declare((api, opts) => {
   api.assertVersion(7)
 
   const {
+    classLoose = true,
     decoratorsLegacy = true,
-    isTSX = false,
+    isTSX,
     pipelineOperator = 'minimal',
   } = opts
 
@@ -42,7 +43,12 @@ export default declare((api, opts) => {
         },
       ],
       syntaxV8intrinsic,
-      proposalClassProperties,
+      [
+        proposalClassProperties,
+        {
+          loose: classLoose,
+        },
+      ],
       proposalDoExpressions,
       proposalFunctionBind,
       proposalFunctionSent,
@@ -57,7 +63,12 @@ export default declare((api, opts) => {
           proposal: pipelineOperator,
         },
       ],
-      proposalPrivateMethods,
+      [
+        proposalPrivateMethods,
+        {
+          loose: classLoose,
+        },
+      ],
       proposalThrowExpression,
     ],
     // no need to override if it has been enabled

@@ -50,11 +50,12 @@ npm i -D babel-preset-proposal-typescript
 
 ## Options
 
-| option             | description                                      | defaults                        |
-| ------------------ | ------------------------------------------------ | ------------------------------- |
-| `decoratorsLegacy` | whether to use legacy decorators semantic        | `true`                          |
-| `isTSX`            | whether to enable `jsx` plugin with `typescript` | `false`, `true for /\.[jt]sx$/` |
-| `pipelineOperator` | implementation of pipeline operator              | `"minimal"`                     |
+| option             | description                                                        | defaults                              |
+| ------------------ | ------------------------------------------------------------------ | ------------------------------------- |
+| `classLoose`       | whether to use loose mode for class properties and private methods | `true`                                |
+| `decoratorsLegacy` | whether to use legacy decorators semantic                          | `true`                                |
+| `isTSX`            | whether to enable `jsx` plugin with `typescript`                   | `false`, `true` but for `/\.[jt]sx$/` |
+| `pipelineOperator` | implementation of pipeline operator                                | `"minimal"`                           |
 
 ## Usage
 

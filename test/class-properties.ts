@@ -1,3 +1,8 @@
+const Test = () => {
+  //
+}
+
+@Test
 export class Counter {
   #x = 0
 
