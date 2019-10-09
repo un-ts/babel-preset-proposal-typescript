@@ -32,14 +32,10 @@ export default declare((api, opts) => {
     plugins: [
       [
         syntaxDecorators,
-        Object.assign(
-          {
-            legacy: decoratorsLegacy,
-          },
-          typeof decoratorsBeforeExport === 'boolean' && {
-            decoratorsBeforeExport,
-          },
-        ),
+        {
+          decoratorsBeforeExport,
+          legacy: decoratorsLegacy,
+        },
       ],
       syntaxDynamicImport,
       [
