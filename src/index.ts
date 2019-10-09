@@ -22,6 +22,7 @@ export default declare((api, opts) => {
 
   const {
     classLoose = true,
+    decoratorsBeforeExport,
     decoratorsLegacy = true,
     isTSX,
     pipelineOperator = 'minimal',
@@ -32,6 +33,7 @@ export default declare((api, opts) => {
       [
         syntaxDecorators,
         {
+          decoratorsBeforeExport,
           legacy: decoratorsLegacy,
         },
       ],
