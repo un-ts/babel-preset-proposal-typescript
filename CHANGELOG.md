@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.4...v1.4.5) (2019-10-09)
+
 ### [1.4.4](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.3...v1.4.4) (2019-10-09)
 
 
