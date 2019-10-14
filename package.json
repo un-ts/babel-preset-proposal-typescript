@@ -74,7 +74,7 @@
     "babel-jest": "^24.9.0",
     "babel-preset-proposal-typescript": "link:.",
     "eslint": "^6.5.1",
-    "husky": "^3.0.8",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
