@@ -874,7 +874,7 @@
     "@babel/helper-regex" "^7.4.4"
     regexpu-core "^4.6.0"
 
-"@babel/preset-env@^7.6.2", "@babel/preset-env@^7.6.3":
+"@babel/preset-env@^7.6.3":
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.6.3.tgz#9e1bf05a2e2d687036d24c40e4639dc46cef2271"
   integrity sha512-CWQkn7EVnwzlOdR5NOm2+pfgSNEZmvGjOhlCHBDq0J8/EStr+G+FvPEiz9B56dR6MoiUFjXhfE4hjLoAKKJtIQ==
@@ -1415,12 +1415,12 @@
   resolved "https://registry.yarnpkg.com/@pkgr/named-exports/-/named-exports-0.3.0.tgz#fffb72c50eb359f71d22066f5ae9eefa9a8c15e2"
   integrity sha512-oNStMLh73dEmn443mmqPtdzAqY7FzudJDQXsgBI0lk0m/DI8SqH50IwHVX4NQaaAeIQ+5mx52qEaO34khHIUuA==
 
-"@pkgr/rollup@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@pkgr/rollup/-/rollup-0.2.4.tgz#5872bf5b7624f4fe4ebe4c851a6d650798506a6c"
-  integrity sha512-BSjncoN2BXkwNd858yR8H57u0F01pFJ99hoq4Jr/8jpJbB2gPo2JkO1NruhhkLy9t41FnDpjRdhsVN0Y/M6/BQ==
+"@pkgr/rollup@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@pkgr/rollup/-/rollup-0.2.6.tgz#6421f3dfc679f16882f9775358b5037591f2e1d3"
+  integrity sha512-WIcOrmdrA5TdAfXb9kPKL6h4Tw6qsn/A+6aqZhev9BZz4KcV2Phi+nODTZtaIfBVhnJ9GUFTfa5s+Z6cvK/z3A==
   dependencies:
-    "@babel/preset-env" "^7.6.2"
+    "@babel/preset-env" "^7.6.3"
     "@pkgr/named-exports" "^0.3.0"
     "@pkgr/umd-globals" "^0.3.0"
     "@rxts/rollup-plugin-alias" "^0.1.0-beta"
@@ -1437,7 +1437,7 @@
     rollup-plugin-replace "^2.2.0"
     rollup-plugin-terser "^5.1.2"
     rollup-plugin-typescript "^1.0.1"
-    rollup-plugin-url "^2.2.2"
+    rollup-plugin-url "^3.0.0"
 
 "@pkgr/umd-globals@^0.3.0":
   version "0.3.0"
@@ -2143,7 +2143,6 @@ babel-preset-jest@^24.9.0:
 
 "babel-preset-proposal-typescript@link:.":
   version "0.0.0"
-  uid ""
 
 babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
@@ -7939,13 +7938,12 @@ rollup-plugin-typescript@^1.0.1:
     resolve "^1.10.0"
     rollup-pluginutils "^2.5.0"
 
-rollup-plugin-url@^2.2.2:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-2.2.4.tgz#36a6dedb709f73647bed7b253b9dcd4f3e781af4"
-  integrity sha512-vQjMgJj3tYrg6nKYO/Tvc8s1WTqbaLzHXia17358E6vO0Iq4Ih5WcWYRPopLMUx0x63/31+9ezApAL0HFd998w==
+rollup-plugin-url@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-3.0.0.tgz#38c1540eb02cf29aec2b7fb57ad3877505ed6a75"
+  integrity sha512-zeSVpWwsePvc6oTw5eyAlkfHhS6ZT9/pNVVgyzbeMTgd6rovxgg0FPE4o86b9Snembc0rCAaTvEsSfZinJMITw==
   dependencies:
     mime "^2.4.4"
-    mkdirp "^0.5.1"
     rollup-pluginutils "^2.8.2"
 
 rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
