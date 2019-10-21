@@ -54,7 +54,7 @@
     "@babel/plugin-syntax-typescript": "^7.3.3"
   },
   "devDependencies": {
-    "@1stg/commitlint-config": "^0.1.0",
+    "@1stg/commitlint-config": "^0.1.2",
     "@1stg/eslint-config": "^0.12.20",
     "@1stg/husky-config": "^0.3.1",
     "@1stg/lint-staged": "^0.8.6",
