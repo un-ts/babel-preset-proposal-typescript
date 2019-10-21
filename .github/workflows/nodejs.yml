@@ -26,6 +26,8 @@ jobs:
           yarn lint
         env:
           CI: true
+          EFF_NO_LINK_RULES: true
+          PARSER_NO_WATCH: true
 
   codecov:
     runs-on: macOS-latest
