@@ -13,8 +13,9 @@ before_install:
 install: yarn --frozen-lockfile
 
 script:
-  - yarn test
+  - yarn build
   - yarn lint
+  - yarn test
 
 after_success:
   - yarn global add codecov codacy-coverage

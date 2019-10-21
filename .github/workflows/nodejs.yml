@@ -22,10 +22,13 @@ jobs:
       - name: build, lint, test
         run: |
           yarn --frozen-lockfile
-          yarn test
+          yarn build
           yarn lint
+          yarn test
         env:
           CI: true
+          EFF_NO_LINK_RULES: true
+          PARSER_NO_WATCH: true
 
   codecov:
     runs-on: macOS-latest
