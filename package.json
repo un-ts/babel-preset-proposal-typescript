@@ -79,5 +79,8 @@
     "prettier": "^1.18.2",
     "rollup": "^1.25.1",
     "typescript": "^3.6.4"
+  },
+  "resolutions": {
+    "rollup-plugin-url": "^2.2.4"
   }
 }
