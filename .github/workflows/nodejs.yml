@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: [8.x, 10.x, 12.x]
+        node: [12.x]
         os: [macOS-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
@@ -26,16 +26,15 @@ jobs:
           yarn lint
           yarn test
         env:
-          CI: true
-          EFF_NO_LINK_RULES: true
-          PARSER_NO_WATCH: true
+          CI: 'true'
+          EFF_NO_LINK_RULES: 'true'
+          PARSER_NO_WATCH: 'true'
 
   codecov:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     needs: build
     steps:
       - name: Report Test Code Coverage
-        if: matrix.node == '12.x'
         run: |
           yarn global add codecov codacy-coverage
           codecov
@@ -44,11 +43,11 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   deploy:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     needs: build
     steps:
       - name: Publish Release and npm Package
-        if: github.event_name == 'push' && github.ref	== 'master' && matrix.node == '12.x'
+        if: github.event_name == 'push' && github.ref	== 'master'
         run: bash deploy.sh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,11 +56,10 @@ jobs:
           GH_REPO: ${{ github.repository }}
 
   codecheck:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     needs: [build, deploy]
     steps:
       - name: Code Check
-        if: matrix.node == '12.x'
         run: |
           yarn add -D @codechecks/client @codechecks/build-size-watcher
           yarn codechecks
