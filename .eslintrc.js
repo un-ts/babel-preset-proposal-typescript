@@ -1,9 +1,7 @@
-const { resolve } = require('path')
 const { jest, js, test, ts, mdx } = require('@1stg/eslint-config/overrides')
-const { merge } = require('lodash')
 
 module.exports = {
-  extends: ['@1stg', 'plugin:import/typescript'],
+  extends: ['@1stg/eslint-config/base', 'plugin:import/typescript'],
   parser: 'babel-eslint',
   settings: {
     'import/ignore': [/test\/private-methods.ts$/],
@@ -14,6 +12,12 @@ module.exports = {
     ...ts.settings,
   },
   overrides: [
+    {
+      files: '.*rc.js',
+      rules: {
+        'node/no-extraneous-require': 0,
+      },
+    },
     {
       ...js,
       files: '*.{js,ts}',
