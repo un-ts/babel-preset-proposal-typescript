@@ -3,6 +3,8 @@
 [![GitHub Actions](https://github.com/rx-ts/babel-preset-proposal-typescript/workflows/Node%20CI/badge.svg)](https://github.com/rx-ts/babel-preset-proposal-typescript/actions?query=workflow%3A%22Node+CI%22)
 [![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
 [![Codacy Grade](https://img.shields.io/codacy/grade/53177b35c7a1440184d819836ea7a5ed)](https://www.codacy.com/app/JounQin/babel-preset-proposal-typescript)
+[![npm](https://img.shields.io/npm/v/babel-preset-proposal-typescript.svg)](https://www.npmjs.com/package/babel-preset-proposal-typescript)
+[![GitHub Release](https://img.shields.io/github/release/rx-ts/babel-preset-proposal-typescript)](https://github.com/rx-ts/babel-preset-proposal-typescript/releases)
 
 [![David Peer](https://img.shields.io/david/peer/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=peer)
 [![David](https://img.shields.io/david/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript)
