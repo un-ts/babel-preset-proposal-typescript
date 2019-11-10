@@ -17,77 +17,89 @@ import { declare } from '@babel/helper-plugin-utils'
 
 import syntaxV8intrinsic from './v8intrinsic'
 
-export default declare((api, opts) => {
-  api.assertVersion(7)
+import { ConfigAPI } from '@babel/core'
 
-  const {
-    classLoose = true,
-    decoratorsBeforeExport,
-    decoratorsLegacy = true,
-    isTSX,
-    pipelineOperator = 'minimal',
-  } = opts
+export interface ProposalTypeScriptOptions {
+  classLoose?: boolean
+  decoratorsBeforeExport?: boolean
+  decoratorsLegacy?: boolean
+  isTSX?: boolean
+  pipelineOperator?: 'minimal'
+}
 
-  return {
-    plugins: [
-      [
-        syntaxDecorators,
-        {
-          decoratorsBeforeExport,
-          legacy: decoratorsLegacy,
-        },
-      ],
-      syntaxDynamicImport,
-      [
-        syntaxTypeScript,
-        {
-          isTSX,
-        },
-      ],
-      syntaxV8intrinsic,
-      [
-        proposalClassProperties,
-        {
-          loose: classLoose,
-        },
-      ],
-      proposalDoExpressions,
-      proposalFunctionBind,
-      proposalFunctionSent,
-      proposalJsonStrings,
-      proposalLogicalAssignmentOperators,
-      proposalNullishCoalescingOperator,
-      proposalOptionalChaining,
-      proposalPartialApplication,
-      [
-        proposalPipelineOperator,
-        {
-          proposal: pipelineOperator,
-        },
-      ],
-      [
-        proposalPrivateMethods,
-        {
-          loose: classLoose,
-        },
-      ],
-      proposalThrowExpression,
-    ],
-    // no need to override if it has been enabled
-    overrides: isTSX
-      ? undefined
-      : [
+export default declare(
+  (
+    api: ConfigAPI,
+    {
+      classLoose = true,
+      decoratorsBeforeExport,
+      decoratorsLegacy = true,
+      isTSX,
+      pipelineOperator = 'minimal',
+    }: ProposalTypeScriptOptions,
+  ) => {
+    api.assertVersion(7)
+    return {
+      plugins: [
+        [
+          syntaxDecorators,
           {
-            test: /\.[jt]sx$/,
-            plugins: [
-              [
-                syntaxTypeScript,
-                {
-                  isTSX: true,
-                },
-              ],
-            ],
+            decoratorsBeforeExport,
+            legacy: decoratorsLegacy,
           },
         ],
-  }
-})
+        syntaxDynamicImport,
+        [
+          syntaxTypeScript,
+          {
+            isTSX,
+          },
+        ],
+        syntaxV8intrinsic,
+        [
+          proposalClassProperties,
+          {
+            loose: classLoose,
+          },
+        ],
+        proposalDoExpressions,
+        proposalFunctionBind,
+        proposalFunctionSent,
+        proposalJsonStrings,
+        proposalLogicalAssignmentOperators,
+        proposalNullishCoalescingOperator,
+        proposalOptionalChaining,
+        proposalPartialApplication,
+        [
+          proposalPipelineOperator,
+          {
+            proposal: pipelineOperator,
+          },
+        ],
+        [
+          proposalPrivateMethods,
+          {
+            loose: classLoose,
+          },
+        ],
+        proposalThrowExpression,
+      ],
+      // no need to override if it has been enabled
+      overrides: isTSX
+        ? undefined
+        : [
+            {
+              test: /\.[jt]sx$/,
+              plugins: [
+                [
+                  syntaxTypeScript,
+                  {
+                    isTSX: true,
+                  },
+                ],
+              ],
+            },
+          ],
+    }
+  },
+)

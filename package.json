@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
@@ -9,10 +9,13 @@
     "node": ">=6.9.0"
   },
   "main": "lib/cjs",
-  "module": "lib/esm",
+  "module": "lib",
   "es2015": "lib/es2015",
+  "fesm5": "lib/esm",
+  "types": "lib",
   "files": [
-    "lib"
+    "lib",
+    "!*.tsbuildinfo"
   ],
   "keywords": [
     "babel-preset",
@@ -24,8 +27,12 @@
     "typescript"
   ],
   "scripts": {
-    "build": "r",
-    "lint": "cross-env PARSER_NO_WATCH=true eslint . --ext js,md,ts -f friendly",
+    "build": "run-p build:*",
+    "build:r": "r",
+    "build:ts": "tsc -P src",
+    "lint": "run-p lint:*",
+    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --ext js,md,ts -f friendly",
+    "lint:tsc": "tsc -P src --noEmit",
     "postinstall": "bash scripts/postinstall.sh || exit 0",
     "prepublishOnly": "yarn test",
     "test": "jest"
@@ -61,11 +68,11 @@
     "@types/jest": "^24.0.22",
     "babel-jest": "^24.9.0",
     "babel-preset-proposal-typescript": "link:.",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5"
   },
   "resolutions": {
     "prettier": "^1.19.1",
-    "rollup-plugin-url": "^2.2.4",
     "typescript": "~3.6.4"
   }
 }

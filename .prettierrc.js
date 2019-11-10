@@ -5,7 +5,7 @@ module.exports = {
   overrides: [
     ...config.overrides,
     {
-      files: '*.ts',
+      files: 'test/*.ts',
       options: {
         parser: 'babel',
       },

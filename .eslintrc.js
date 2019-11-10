@@ -1,4 +1,13 @@
-const { jest, js, test, ts, mdx } = require('@1stg/eslint-config/overrides')
+const {
+  config,
+  jest,
+  js,
+  test,
+  ts,
+  mdx,
+} = require('@1stg/eslint-config/overrides')
+
+const tsBase = ts[0]
 
 module.exports = {
   extends: ['@1stg/eslint-config/base', 'plugin:import/typescript'],
@@ -9,9 +18,10 @@ module.exports = {
       '@typescript-eslint/parser': [],
       'babel-eslint': ['.ts'],
     },
-    ...ts.settings,
+    ...tsBase.settings,
   },
   overrides: [
+    tsBase,
     {
       files: '.*rc.js',
       rules: {
@@ -20,10 +30,11 @@ module.exports = {
     },
     {
       ...js,
-      files: '*.{js,ts}',
+      files: 'test/*.{js,ts}',
     },
     jest,
     mdx,
     test,
+    config,
   ],
 }

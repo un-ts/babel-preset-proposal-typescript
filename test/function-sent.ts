@@ -1,4 +1,4 @@
-function* adder(total?: number = 0) {
+function* adder(total? = 0) {
   let increment = 1
   let request
   do {
