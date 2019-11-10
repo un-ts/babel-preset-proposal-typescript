@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.6](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.5...v1.4.6) (2019-11-10)
+
+
+### Features
+
+* better TypeScript support ([66f65c5](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/66f65c51bec7d4c67eb1d3f65438a831b2dfe67d))
+
+
+### Bug Fixes
+
+* lock rollup-plugin-url@^2.2.4 for node 8 ([d0b7bae](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/d0b7baead76b14384326ad72acf1ee1e51409940))
+
 ### [1.4.5](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.4...v1.4.5) (2019-10-09)
 
 ### [1.4.4](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.3...v1.4.4) (2019-10-09)
