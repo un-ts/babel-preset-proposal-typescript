@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "1.4.6",
+  "version": "1.5.0",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
@@ -38,8 +38,8 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@babel/core": "^7.6.4",
-    "typescript": "^3.0.0"
+    "@babel/core": "^7.7.2",
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.0.0",
@@ -69,10 +69,11 @@
     "babel-jest": "^24.9.0",
     "babel-preset-proposal-typescript": "link:.",
     "jest": "^24.9.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.7.2"
   },
   "resolutions": {
-    "prettier": "^1.19.1",
-    "typescript": "~3.6.4"
+    "@babel/core": "^7.7.2",
+    "prettier": "^1.19.1"
   }
 }

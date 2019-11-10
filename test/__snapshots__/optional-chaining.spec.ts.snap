@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`optional-chaining 1`] = `"Unexpected token '.'"`;
-
-exports[`optional-chaining 2`] = `"Cannot read property '0' of undefined"`;
-
-exports[`optional-chaining 3`] = `"Cannot read property 'd' of undefined"`;

@@ -38,13 +38,11 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 4. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
 5. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
 6. [logical-assignment-operators](https://www.npmjs.com/package/@babel/plugin-proposal-logical-assignment-operators)
-7. [nullish-coalescing-operator](https://www.npmjs.com/package/@babel/plugin-proposal-nullish-coalescing-operator)
-8. [optional-chaining](https://www.npmjs.com/package/@babel/plugin-proposal-optional-chaining)
-9. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
-10. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
-11. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
-12. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-13. [v8intrinsic](./v8intrinsic.js) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
+7. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
+8. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
+9. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
+10. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+11. [v8intrinsic](./v8intrinsic.js) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
 
 ## Install
 
