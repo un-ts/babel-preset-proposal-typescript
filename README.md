@@ -1,11 +1,17 @@
 # babel-preset-proposal-typescript
 
-[![Travis](https://img.shields.io/travis/com/rx-ts/babel-preset-proposal-typescript.svg)](https://travis-ci.com/rx-ts/babel-preset-proposal-typescript)
+[![GitHub Actions](https://github.com/rx-ts/babel-preset-proposal-typescript/workflows/Node%20CI/badge.svg)](https://github.com/rx-ts/babel-preset-proposal-typescript/actions?query=workflow%3A%22Node+CI%22)
 [![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
 [![Codacy Grade](https://img.shields.io/codacy/grade/53177b35c7a1440184d819836ea7a5ed)](https://www.codacy.com/app/JounQin/babel-preset-proposal-typescript)
+
 [![David Peer](https://img.shields.io/david/peer/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=peer)
 [![David](https://img.shields.io/david/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript)
 [![David Dev](https://img.shields.io/david/dev/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=dev)
+
+[![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![codechecks.io](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
 
 Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.
 
