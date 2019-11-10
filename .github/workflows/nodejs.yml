@@ -51,6 +51,11 @@ jobs:
           CI: 'true'
           CC_SECRET: ${{ secrets.CC_SECRET }}
 
+      - name: Dump GitHub Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
       - name: Publish GitHub Release and npm Package
         if: matrix.os == 'macOS-latest' && github.event_name == 'push' && github.ref	== 'master'
         run: bash scripts/deploy.sh
