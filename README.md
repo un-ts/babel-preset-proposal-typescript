@@ -42,7 +42,7 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 8. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
 9. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
 10. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-11. [v8intrinsic](./v8intrinsic.js) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
+11. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
 
 ## Install
 
