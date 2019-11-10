@@ -53,7 +53,7 @@ jobs:
 
       - name: Publish GitHub Release and npm Package
         if: matrix.os == 'macOS-latest' && github.event_name == 'push' && github.ref	== 'master'
-        run: bash deploy.sh
+        run: bash scripts/deploy.sh
         env:
           CI: 'true'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
