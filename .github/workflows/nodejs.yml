@@ -57,5 +57,6 @@ jobs:
         env:
           CI: 'true'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_BRANCH: ${{ github.ref }}
+          GH_BRANCH: master
           GH_REPO: ${{ github.repository }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
