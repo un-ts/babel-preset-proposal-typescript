@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.6...v1.5.0) (2019-11-10)
+
+
+### Features
+
+* drop nullish-coalescing-operator and optional-chaining in favor of typescript 3.7.0 ([0fe0093](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/0fe0093e22c60c8a04846e643c8998ff5c28fc29))
+
 ### [1.4.6](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.4.5...v1.4.6) (2019-11-10)
 
 
