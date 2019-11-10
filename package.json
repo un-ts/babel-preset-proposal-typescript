@@ -64,6 +64,7 @@
     "jest": "^24.9.0"
   },
   "resolutions": {
+    "prettier": "^1.19.1",
     "rollup-plugin-url": "^2.2.4",
     "typescript": "~3.6.4"
   }
