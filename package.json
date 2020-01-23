@@ -31,7 +31,7 @@
     "build:r": "r",
     "build:ts": "tsc -P src",
     "lint": "run-p lint:*",
-    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --ext js,md,ts -f friendly",
+    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts -f friendly",
     "lint:tsc": "tsc -P src --noEmit",
     "postinstall": "sh scripts/postinstall.sh || exit 0",
     "prepublishOnly": "yarn test",
