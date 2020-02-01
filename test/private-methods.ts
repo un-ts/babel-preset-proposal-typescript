@@ -16,7 +16,7 @@ export class Counter {
 }
 
 class Loader {
-  load(url) {
+  load(url: string) {
     return url + '_loaded'
   }
 }
@@ -31,7 +31,7 @@ export class Resource {
 
   status = null
 
-  constructor(url) {
+  constructor(url: string) {
     this.status = Resource.#loader.load(url)
   }
 }

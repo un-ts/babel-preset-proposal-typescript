@@ -1,2 +1,2 @@
 // eslint-disable-next-line no-multi-str
-export default 'before after'
+export default () => 'before after'

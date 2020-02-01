@@ -1,6 +1,6 @@
 const box = {
   weight: 2,
-  getWeight() {
+  getWeight(): number {
     return this.weight
   },
 }

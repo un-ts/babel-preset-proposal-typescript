@@ -1,23 +1,23 @@
-function doubleSay(str) {
+function doubleSay(str: string) {
   return str + ', ' + str
 }
 
-function capitalize(str) {
+function capitalize(str: string) {
   return str[0].toUpperCase() + str.slice(1)
 }
 
-function exclaim(str) {
+function exclaim(str: string) {
   return str + '!'
 }
 
-function double(x) {
+function double(x: number) {
   return x + x
 }
-function add(x, y) {
+function add(x: number, y: number) {
   return x + y
 }
 
-function boundScore(min, max, score) {
+function boundScore(min: number, max: number, score: number) {
   return Math.max(min, Math.min(max, score))
 }
 
