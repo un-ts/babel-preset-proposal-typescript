@@ -3,7 +3,7 @@ module.exports = {
     '^.+\\.(m?j|t)s$': 'babel-jest',
   },
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/test/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/test/**/!(v8intrinsic).ts'],
   coverageThreshold: {
     global: {
       branches: 100,
