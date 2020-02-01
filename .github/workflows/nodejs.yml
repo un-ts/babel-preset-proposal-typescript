@@ -10,16 +10,32 @@ jobs:
         os: [macOS-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@master
+
+      - uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node }}
+
       - name: Setup yarn
         run: |
           curl -o- -L https://yarnpkg.com/install.sh | bash
           export PATH="$HOME/.yarn/bin:$PATH"
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ matrix.os }}-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ matrix.os }}-${{ matrix.node }}-yarn-
+
       - name: Install Dependencies
         run: yarn --frozen-lockfile
+        env:
+          CI: 'true'
 
       - name: Build, Lint and Test
         run: |
@@ -35,7 +51,7 @@ jobs:
         run: |
           yarn global add codecov codacy-coverage
           codecov
-          cat ./coverage/lcov.info | codacy-coverage --username JounQin --projectName babel-preset-proposal-typescript
+          cat ./coverage/lcov.info | codacy-coverage -u rx-ts -n babel-preset-proposal-typescript
         env:
           CI: 'true'
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
@@ -53,10 +69,12 @@ jobs:
 
       - name: Publish GitHub Release and npm Package
         if: matrix.os == 'macOS-latest' && github.event_name == 'push' && github.ref	== 'refs/heads/master'
-        run: bash scripts/deploy.sh
+        run: |
+          git remote set-url origin "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          npm set //registry.npmjs.org/:_authToken $NPM_TOKEN
+          git checkout master
+          bash scripts/deploy.sh
         env:
           CI: 'true'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_BRANCH: master
-          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

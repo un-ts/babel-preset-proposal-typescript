@@ -2,7 +2,7 @@
 
 [![GitHub Actions](https://github.com/rx-ts/babel-preset-proposal-typescript/workflows/Node%20CI/badge.svg)](https://github.com/rx-ts/babel-preset-proposal-typescript/actions?query=workflow%3A%22Node+CI%22)
 [![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
-[![Codacy Grade](https://img.shields.io/codacy/grade/53177b35c7a1440184d819836ea7a5ed)](https://www.codacy.com/app/JounQin/babel-preset-proposal-typescript)
+[![Codacy Grade](https://img.shields.io/codacy/grade/bb554fe914d64b4b87cadb8a48b2a97b)](https://www.codacy.com/gh/rx-ts/babel-preset-proposal-typescript)
 [![npm](https://img.shields.io/npm/v/babel-preset-proposal-typescript.svg)](https://www.npmjs.com/package/babel-preset-proposal-typescript)
 [![GitHub Release](https://img.shields.io/github/release/rx-ts/babel-preset-proposal-typescript)](https://github.com/rx-ts/babel-preset-proposal-typescript/releases)
 
@@ -11,6 +11,7 @@
 [![David Dev](https://img.shields.io/david/dev/rx-ts/babel-preset-proposal-typescript.svg)](https://david-dm.org/rx-ts/babel-preset-proposal-typescript?type=dev)
 
 [![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![codechecks.io](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
@@ -29,6 +30,8 @@ So that you can use babel to transform proposals which are current in stage 0-2 
   - [Via CLI](#via-cli)
   - [Via Node API](#via-node-api)
   - [Via webpack](#via-webpack)
+- [Changelog](#changelog)
+- [License](#license)
 
 ## Enabled proposal plugins
 
@@ -119,3 +122,15 @@ loader = {
   ],
 }
 ```
+
+## Changelog
+
+Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).
+
+## License
+
+[MIT][] © [JounQin][]@[1stG.me][]
+
+[1stg.me]: https://www.1stg.me
+[jounqin]: https://GitHub.com/JounQin
+[mit]: http://opensource.org/licenses/MIT

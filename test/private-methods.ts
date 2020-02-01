@@ -22,16 +22,16 @@ class Loader {
 }
 
 export class Resource {
-  static #loaderInstance = null;
+  static #loaderInstance = null
 
   static get #loader() {
-    if (!this.#loaderInstance) this.#loaderInstance = new Loader();
-    return this.#loaderInstance;
+    if (!this.#loaderInstance) this.#loaderInstance = new Loader()
+    return this.#loaderInstance
   }
 
-  status = null;
-  
+  status = null
+
   constructor(url) {
-    this.status = Resource.#loader.load(url);
+    this.status = Resource.#loader.load(url)
   }
 }
