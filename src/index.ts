@@ -1,6 +1,5 @@
-import syntaxDecorators from '@babel/plugin-syntax-decorators'
-import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
-import syntaxTypeScript from '@babel/plugin-syntax-typescript'
+import { ConfigAPI } from '@babel/core'
+import { declare } from '@babel/helper-plugin-utils'
 import proposalClassProperties from '@babel/plugin-proposal-class-properties'
 import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
 import proposalFunctionBind from '@babel/plugin-proposal-function-bind'
@@ -13,11 +12,11 @@ import proposalPartialApplication from '@babel/plugin-proposal-partial-applicati
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
 import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
-import { declare } from '@babel/helper-plugin-utils'
+import syntaxDecorators from '@babel/plugin-syntax-decorators'
+import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
+import syntaxTypeScript from '@babel/plugin-syntax-typescript'
 
 import syntaxV8intrinsic from './v8intrinsic'
-
-import { ConfigAPI } from '@babel/core'
 
 export interface ProposalTypeScriptOptions {
   classLoose?: boolean

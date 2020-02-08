@@ -1,6 +1,5 @@
-import { declare } from '@babel/helper-plugin-utils'
-
 import { ConfigAPI, TransformOptions } from '@babel/core'
+import { declare } from '@babel/helper-plugin-utils'
 
 export default declare((api: ConfigAPI) => {
   api.assertVersion(7)
