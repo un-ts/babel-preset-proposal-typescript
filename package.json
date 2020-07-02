@@ -38,26 +38,26 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.10.4",
     "typescript": "^3.8.2"
   },
   "dependencies": {
-    "@babel/helper-plugin-utils": "^7.8.3",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-do-expressions": "^7.8.3",
-    "@babel/plugin-proposal-function-bind": "^7.8.3",
-    "@babel/plugin-proposal-function-sent": "^7.8.3",
-    "@babel/plugin-proposal-json-strings": "^7.8.3",
-    "@babel/plugin-proposal-logical-assignment-operators": "^7.8.3",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
-    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
-    "@babel/plugin-proposal-partial-application": "^7.8.3",
-    "@babel/plugin-proposal-pipeline-operator": "^7.8.3",
-    "@babel/plugin-proposal-private-methods": "^7.8.3",
-    "@babel/plugin-proposal-throw-expressions": "^7.8.3",
-    "@babel/plugin-syntax-decorators": "^7.8.3",
+    "@babel/helper-plugin-utils": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-do-expressions": "^7.10.4",
+    "@babel/plugin-proposal-function-bind": "^7.10.4",
+    "@babel/plugin-proposal-function-sent": "^7.10.4",
+    "@babel/plugin-proposal-json-strings": "^7.10.4",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.4",
+    "@babel/plugin-proposal-partial-application": "^7.10.4",
+    "@babel/plugin-proposal-pipeline-operator": "^7.10.4",
+    "@babel/plugin-proposal-private-methods": "^7.10.4",
+    "@babel/plugin-proposal-throw-expressions": "^7.10.4",
+    "@babel/plugin-syntax-decorators": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-syntax-typescript": "^7.8.3"
+    "@babel/plugin-syntax-typescript": "^7.10.4"
   },
   "devDependencies": {
     "@1stg/lib-config": "^0.4.3",
@@ -70,7 +70,7 @@
     "yarn-deduplicate": "^1.1.1"
   },
   "resolutions": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.10.4",
     "babel-eslint": "^11.0.0-beta.2",
     "prettier": "prettier/prettier#next"
   }
