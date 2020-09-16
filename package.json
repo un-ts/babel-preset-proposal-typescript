@@ -73,6 +73,6 @@
     "yarn-deduplicate": "^2.1.1"
   },
   "resolutions": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   }
 }
