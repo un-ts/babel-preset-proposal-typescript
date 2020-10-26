@@ -64,7 +64,7 @@
   "devDependencies": {
     "@1stg/lib-config": "^0.5.5",
     "@types/babel__core": "^7.1.9",
-    "@types/jest": "^26.0.7",
+    "@types/jest": "^26.0.15",
     "babel-eslint": "^11.0.0-beta.2",
     "babel-jest": "^26.1.0",
     "babel-preset-proposal-typescript": "link:.",
