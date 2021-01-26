@@ -35,17 +35,18 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 
 ## Enabled proposal plugins
 
-1. [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
-2. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
-3. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
-4. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
-5. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
-6. [logical-assignment-operators](https://www.npmjs.com/package/@babel/plugin-proposal-logical-assignment-operators)
+1. [class-static-block](https://www.npmjs.com/package/@babel/plugin-proposal-class-static-block)
+2. [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+3. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
+4. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
+5. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
+6. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
 7. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
 8. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
 9. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
-10. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-11. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
+10. [private-property-in-object](https://www.npmjs.com/package/@babel/plugin-proposal-private-property-in-object)
+11. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+12. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
 
 ## Install
 

@@ -9,7 +9,7 @@ const bigBox = { weight: 10 }
 
 // Can be chained:
 function add(this: number, val: number) {
-  // eslint-disable-next-line babel/no-invalid-this
+  // eslint-disable-next-line @babel/no-invalid-this
   return this + val
 }
 
