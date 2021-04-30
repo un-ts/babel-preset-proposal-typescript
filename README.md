@@ -103,7 +103,7 @@ loader = {
   test: /\.[jt]sx?$/,
   loader: 'babel-loader',
   options: {
-    presets: ['proposal-typescript'],
+    presets: ['proposal-typescript', '@babel/typescript'],
   },
 }
 
