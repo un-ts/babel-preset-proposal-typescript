@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
@@ -34,6 +34,7 @@
     "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts -f friendly",
     "lint:tsc": "tsc -P src --noEmit",
     "prepare": "yarn-deduplicate --strategy fewer || exit 0",
+    "prerelease": "npm run build",
     "pretest": "yarn build:r",
     "release": "clean-publish && changeset publish",
     "test": "jest"
