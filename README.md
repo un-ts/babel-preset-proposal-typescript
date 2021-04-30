@@ -1,6 +1,6 @@
 # babel-preset-proposal-typescript
 
-[![GitHub Actions](https://github.com/rx-ts/babel-preset-proposal-typescript/workflows/Node%20CI/badge.svg)](https://github.com/rx-ts/babel-preset-proposal-typescript/actions?query=workflow%3A%22Node+CI%22)
+[![GitHub Actions](https://github.com/rx-ts/babel-preset-proposal-typescript/workflows/CI/badge.svg)](https://github.com/rx-ts/babel-preset-proposal-typescript/actions/workflows/ci.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/rx-ts/babel-preset-proposal-typescript.svg)](https://codecov.io/gh/rx-ts/babel-preset-proposal-typescript)
 [![Codacy Grade](https://img.shields.io/codacy/grade/bb554fe914d64b4b87cadb8a48b2a97b)](https://www.codacy.com/gh/rx-ts/babel-preset-proposal-typescript)
 [![npm](https://img.shields.io/npm/v/babel-preset-proposal-typescript.svg)](https://www.npmjs.com/package/babel-preset-proposal-typescript)

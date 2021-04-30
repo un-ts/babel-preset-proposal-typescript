@@ -11,6 +11,7 @@ const tsBase = ts[0]
 
 js.parser = '@babel/eslint-parser'
 js.plugins = ['@babel']
+
 const jsRules = js.rules
 
 delete jsRules['babel/camelcase']
