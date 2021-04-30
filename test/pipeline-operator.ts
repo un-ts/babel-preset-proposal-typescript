@@ -21,10 +21,8 @@ function boundScore(min: number, max: number, score: number) {
   return Math.max(min, Math.min(max, score))
 }
 
-export default (word: string, score: number) => {
-  return [
-    word |> doubleSay |> capitalize |> exclaim,
+export default (word: string, score: number) => [
+  word |> doubleSay |> capitalize |> exclaim,
 
-    score |> double |> (_ => add(7, _)) |> (_ => boundScore(0, 100, _)),
-  ]
-}
+  score |> double |> (_ => add(7, _)) |> (_ => boundScore(0, 100, _)),
+]

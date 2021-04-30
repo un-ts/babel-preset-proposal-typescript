@@ -19,9 +19,7 @@ export default () => {
   result.push(box.getWeight())
 
   const { getWeight } = box
-  result.push(bigBox::getWeight())
-
-  result.push(bigBox::getWeight()::add(5))
+  result.push(bigBox::getWeight(), bigBox::getWeight()::add(5))
 
   return result
 }
