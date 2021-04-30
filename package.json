@@ -1,8 +1,8 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
-  "repository": "git@github.com/rx-ts/babel-preset-proposal-typescript.git",
+  "repository": "git+https://github.com/rx-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "engines": {
@@ -69,7 +69,6 @@
     "@types/babel__core": "^7.1.14",
     "@types/jest": "^26.0.23",
     "babel-jest": "^26.6.3",
-    "babel-preset-proposal-typescript": "link:.",
     "clean-publish": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "typescript": "^4.2.4",

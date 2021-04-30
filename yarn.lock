@@ -2980,6 +2980,7 @@ babel-preset-jest@^26.6.2:
 
 babel-preset-proposal-typescript@^1.5.0:
   version "0.0.0"
+  uid ""
 
 "babel-preset-proposal-typescript@link:.":
   version "0.0.0"
