@@ -18,6 +18,7 @@ import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
 
 import syntaxV8intrinsic from './v8intrinsic'
+import { IS_RECORD_TUPLE_SUPPORTED } from './utils'
 
 export interface ProposalTypeScriptOptions {
   classLoose?: boolean
@@ -38,7 +39,7 @@ export default declare(
       decoratorsLegacy = true,
       isTSX,
       pipelineOperator = 'minimal',
-      recordTuplePolyfill = true,
+      recordTuplePolyfill = IS_RECORD_TUPLE_SUPPORTED,
       recordTupleSyntaxType = 'hash',
     }: ProposalTypeScriptOptions,
   ) => {
@@ -96,7 +97,7 @@ export default declare(
             loose: classLoose,
           },
         ],
-        [
+        recordTuplePolyfill && [
           proposalRecordAndTuple,
           {
             importPolyfill: !!recordTuplePolyfill,
@@ -108,7 +109,7 @@ export default declare(
           },
         ],
         proposalThrowExpression,
-      ],
+      ].filter(Boolean),
       // no need to override if it has been enabled
       overrides: isTSX
         ? undefined
