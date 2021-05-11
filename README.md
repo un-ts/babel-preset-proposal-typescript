@@ -60,13 +60,15 @@ npm i -D babel-preset-proposal-typescript
 
 ## Options
 
-| option                   | description                                                                                              | defaults                              |
-| ------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| `classLoose`             | whether to use loose mode for class properties and private methods                                       | `true`                                |
-| `decoratorsBeforeExport` | See [Babel Document](https://babeljs.io/docs/en/babel-plugin-proposal-decorators#decoratorsbeforeexport) | `undefined`                           |
-| `decoratorsLegacy`       | whether to use legacy decorators semantic                                                                | `true`                                |
-| `isTSX`                  | whether to enable `jsx` plugin with `typescript`                                                         | `false`, but `true` for `/\.[jt]sx$/` |
-| `pipelineOperator`       | implementation of pipeline operator                                                                      | `"minimal"`                           |
+| option                   | description                                                                                              | defaults                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `classLoose`             | whether to use loose mode for class properties and private methods                                       | `true`                                                   |
+| `decoratorsBeforeExport` | See [Babel Document](https://babeljs.io/docs/en/babel-plugin-proposal-decorators#decoratorsbeforeexport) | `undefined`                                              |
+| `decoratorsLegacy`       | whether to use legacy decorators semantic                                                                | `true`                                                   |
+| `isTSX`                  | whether to enable `jsx` plugin with `typescript`                                                         | `false`, but `true` for `/\.[jt]sx$/`                    |
+| `pipelineOperator`       | implementation of pipeline operator, `minimal`, `smart` or `fsharp`                                      | `minimal`                                                |
+| `recordTuplePolyfill`    | whether to import record-tuple polyfill or specific the polyfill module name                             | `true` and represents `@bloomberg/record-tuple-polyfill` |
+| `recordTupleSyntaxType`  | record-tuple syntax, `hash` or `bar`                                                                     | `hash`                                                   |
 
 ## Usage
 
