@@ -50,17 +50,7 @@ jobs:
           EFF_NO_LINK_RULES: true
           PARSER_NO_WATCH: true
 
-      - name: Code Checks
-        if: matrix.node == 14 # only report codechecks once per commit
-        run: |
-          yarn global add @codechecks/client @codechecks/build-size-watcher
-          codechecks
-        env:
-          CI: 'true'
-          CC_SECRET: ${{ secrets.CC_SECRET }}
-
       - name: Codecov
-        if: matrix.node == 14 # only report coverage once per commit
         run: |
           yarn global add codecov codacy-coverage
           codecov

@@ -3398,10 +3398,10 @@ clean-css@^4.1.11:
   dependencies:
     source-map "~0.6.0"
 
-clean-publish@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-2.1.1.tgz#2286cbcf587d2eb8bac56a771854539c30f6f035"
-  integrity sha512-IO0aLHoeSK23rIJ7Epvb/3wAstsehvJaPi5cv6zQrvmpBHjJ0AaLzbiDlPfxSWBRCQQ8S6UcHk65IMiIyAWI6Q==
+clean-publish@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/clean-publish/-/clean-publish-2.2.0.tgz#3d249934128757e457dc060511a056d32487f38d"
+  integrity sha512-U+/Y5YXbxnqWlh8y/toKSEGbMvIvsgfkfJ7yK0v0uQ1mz07lNNSxceY7XaFweEw8LFQo8Al3H7SuQHXbf5Xw8g==
   dependencies:
     cross-spawn "^7.0.3"
     fs-extra "^9.1.0"
@@ -8106,10 +8106,10 @@ prettier-plugin-toml@^0.3.1:
     "@toml-tools/parser" "^0.3.1"
     prettier "^1.16.0"
 
-prettier@>=1.10, prettier@^1.16.0, prettier@^1.18.2, prettier@^1.19.1, prettier@^2.2.0, prettier@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+prettier@>=1.10, prettier@^1.16.0, prettier@^1.18.2, prettier@^1.19.1, prettier@^2.2.0, prettier@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
+  integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"
