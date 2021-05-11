@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`async-do-expressions 1`] = `"await is only valid in async function"`;

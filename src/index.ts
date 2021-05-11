@@ -1,5 +1,6 @@
 import { ConfigAPI } from '@babel/core'
 import { declare } from '@babel/helper-plugin-utils'
+import proposalAsyncDoExpressions from '@babel/plugin-proposal-async-do-expressions'
 import proposalClassProperties from '@babel/plugin-proposal-class-properties'
 import proposalClassStaticBlock from '@babel/plugin-proposal-class-static-block'
 import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
@@ -10,6 +11,7 @@ import proposalPartialApplication from '@babel/plugin-proposal-partial-applicati
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
 import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalPrivatePropertyInObject from '@babel/plugin-proposal-private-property-in-object'
+import proposalRecordAndTuple from '@babel/plugin-proposal-record-and-tuple'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
 import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
@@ -22,7 +24,9 @@ export interface ProposalTypeScriptOptions {
   decoratorsBeforeExport?: boolean
   decoratorsLegacy?: boolean
   isTSX?: boolean
-  pipelineOperator?: 'minimal'
+  pipelineOperator?: 'minimal' | 'smart' | 'fsharp'
+  recordTuplePolyfill?: boolean | string
+  recordTupleSyntaxType?: 'hash' | 'bar'
 }
 
 export default declare(
@@ -34,6 +38,8 @@ export default declare(
       decoratorsLegacy = true,
       isTSX,
       pipelineOperator = 'minimal',
+      recordTuplePolyfill = true,
+      recordTupleSyntaxType = 'hash',
     }: ProposalTypeScriptOptions,
   ) => {
     api.assertVersion(7)
@@ -54,6 +60,7 @@ export default declare(
           },
         ],
         syntaxV8intrinsic,
+        proposalAsyncDoExpressions,
         [
           proposalClassStaticBlock,
           {
@@ -87,6 +94,17 @@ export default declare(
           proposalPrivatePropertyInObject,
           {
             loose: classLoose,
+          },
+        ],
+        [
+          proposalRecordAndTuple,
+          {
+            importPolyfill: !!recordTuplePolyfill,
+            polyfillModuleName:
+              typeof recordTuplePolyfill === 'string'
+                ? recordTuplePolyfill
+                : undefined,
+            syntaxType: recordTupleSyntaxType,
           },
         ],
         proposalThrowExpression,
