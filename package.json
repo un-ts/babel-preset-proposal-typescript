@@ -67,6 +67,7 @@
   "devDependencies": {
     "@1stg/lib-config": "^1.2.10",
     "@babel/eslint-plugin": "^7.13.16",
+    "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
     "@types/babel__core": "^7.1.14",
     "@types/jest": "^26.0.23",
