@@ -2,17 +2,16 @@ const { compare } = require('compare-versions')
 
 module.exports = {
   presets: [
-    'proposal-typescript',
-    '@babel/typescript',
     [
       '@babel/env',
       {
-        loose: true,
         targets: {
           node: true,
         },
       },
     ],
+    '@babel/typescript',
+    'proposal-typescript',
   ],
   plugins: compare(process.versions.node, '14.6', '<')
     ? [
