@@ -35,18 +35,20 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 
 ## Enabled proposal plugins
 
-1. [class-static-block](https://www.npmjs.com/package/@babel/plugin-proposal-class-static-block)
-2. [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
-3. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
-4. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
-5. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
-6. [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
-7. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
-8. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
-9. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
-10. [private-property-in-object](https://www.npmjs.com/package/@babel/plugin-proposal-private-property-in-object)
-11. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-12. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
+1.  [async-do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-async-do-expressions)
+2.  [class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+3.  [class-static-block](https://www.npmjs.com/package/@babel/plugin-proposal-class-static-block)
+4.  [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
+5.  [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
+6.  [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
+7.  [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
+8.  [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
+9.  [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
+10. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
+11. [private-property-in-object](https://www.npmjs.com/package/@babel/plugin-proposal-private-property-in-object)
+12. [record-and-tuple](https://www.npmjs.com/package/@babel/plugin-proposal-record-and-tuple)
+13. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+14. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
 
 ## Install
 
@@ -62,15 +64,17 @@ npm i -D babel-preset-proposal-typescript
 
 | option                   | description                                                                                              | defaults                                                                |
 | ------------------------ | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `classLoose`             | whether to use loose mode for class properties and private methods                                       | `true`                                                                  |
+| `classLoose`             | whether to use loose mode for `class-static-block`, `class-properties` and `private-methods`             | `undefined`                                                             |
 | `decoratorsBeforeExport` | See [Babel Document](https://babeljs.io/docs/en/babel-plugin-proposal-decorators#decoratorsbeforeexport) | `undefined`                                                             |
 | `decoratorsLegacy`       | whether to use legacy decorators semantic                                                                | `true`                                                                  |
 | `isTSX`                  | whether to enable `jsx` plugin with `typescript`                                                         | `false`, but `true` for `/\.[jt]sx$/`                                   |
 | `pipelineOperator`       | implementation of pipeline operator, `minimal`, `smart` or `fsharp`                                      | `minimal`                                                               |
-| `recordTuplePolyfill`    | whether to enable import record-tuple plugin and polyfill, or specific the polyfill module name          | `true` for Node>=14.6, it represents `@bloomberg/record-tuple-polyfill` |
+| `recordTuplePolyfill`    | whether to enable import `record-tuple` plugin and polyfill, or specific the polyfill module name        | `true` for Node>=14.6, it represents `@bloomberg/record-tuple-polyfill` |
 | `recordTupleSyntaxType`  | record-tuple syntax, `hash` or `bar`                                                                     | `hash`                                                                  |
 
 ## Usage
+
+Note that unlike plugins, the presets are applied in an order of last to first (<https://babeljs.io/docs/en/presets/#preset-ordering>), so please make sure `proposal-typescript` is used at the last.
 
 ### Via `.babelrc` (Recommended)
 
@@ -105,7 +109,7 @@ loader = {
   test: /\.[jt]sx?$/,
   loader: 'babel-loader',
   options: {
-    presets: ['proposal-typescript', '@babel/typescript'],
+    presets: ['@babel/typescript', 'proposal-typescript'],
   },
 }
 

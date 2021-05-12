@@ -14,7 +14,6 @@ import proposalPrivatePropertyInObject from '@babel/plugin-proposal-private-prop
 import proposalRecordAndTuple from '@babel/plugin-proposal-record-and-tuple'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
-import syntaxDynamicImport from '@babel/plugin-syntax-dynamic-import'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
 
 import syntaxV8intrinsic from './v8intrinsic'
@@ -34,7 +33,7 @@ export default declare(
   (
     api: ConfigAPI,
     {
-      classLoose = true,
+      classLoose,
       decoratorsBeforeExport,
       decoratorsLegacy = true,
       isTSX,
@@ -53,7 +52,6 @@ export default declare(
             legacy: decoratorsLegacy,
           },
         ],
-        syntaxDynamicImport,
         [
           syntaxTypeScript,
           {
