@@ -6,7 +6,6 @@ import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
 import proposalFunctionBind from '@babel/plugin-proposal-function-bind'
 import proposalFunctionSent from '@babel/plugin-proposal-function-sent'
 import proposalJsonStrings from '@babel/plugin-proposal-json-strings'
-import proposalOptionalChaining from '@babel/plugin-proposal-optional-chaining'
 import proposalPartialApplication from '@babel/plugin-proposal-partial-application'
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
 import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
@@ -71,7 +70,6 @@ export default declare(
         proposalFunctionBind,
         proposalFunctionSent,
         proposalJsonStrings,
-        proposalOptionalChaining,
         proposalPartialApplication,
         [
           proposalPipelineOperator,
