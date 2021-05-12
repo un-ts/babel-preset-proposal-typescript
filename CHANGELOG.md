@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- [#115](https://github.com/rx-ts/babel-preset-proposal-typescript/pull/115) [`eac23d3`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/eac23d3cc0e378a30f8a6cb9ed725bb1201d061b) Thanks [@JounQin](https://github.com/JounQin)! - - feat: upgrade babel core and plugins
+  - feat: enable async-do-expressions and record-and-tuple proposals
+  - feat!: change `classLoose` default valule to `false` and presets order
+
 ## 2.0.3
 
 ### Patch Changes
