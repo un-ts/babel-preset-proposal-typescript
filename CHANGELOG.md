@@ -1,12 +1,20 @@
 # Changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- [#115](https://github.com/rx-ts/babel-preset-proposal-typescript/pull/115) Thanks [@JounQin](https://github.com/JounQin)!
+
+  - [`50d6199`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/50d6199bab3f732f49213cbb0087c6397f82074e) feat: upgrade babel core and plugins
+  - [`db510c9`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/db510c9504506ce2ab73989a03084605e0d3ef7c) feat: enable async-do-expressions and record-and-tuple proposals
+  - [`1dd2ff6`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/1dd2ff608bd86684b852dc6cd1d08e47bd4f3543) feat!: change `classLoose` default valule to `false` and presets order
+
 ## 2.0.3
 
 ### Patch Changes
 
 - [#118](https://github.com/rx-ts/babel-preset-proposal-typescript/pull/118) [`9330176`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/93301762311301ed0d86a5153d48a008aa3d5a45) Thanks [@JounQin](https://github.com/JounQin)! - refactor: remove unused optional-chaining plugin
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [2.0.0](https://github.com/rx-ts/babel-preset-proposal-typescript/compare/v1.5.0...v2.0.0) (2021-01-26)
 
