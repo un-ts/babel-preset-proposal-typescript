@@ -64,6 +64,7 @@
     "@1stg/lib-config": "^0.6.0",
     "@babel/eslint-parser": "^7.12.1",
     "@babel/eslint-plugin": "^7.12.1",
+    "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
     "@types/babel__core": "^7.1.14",
     "@types/jest": "^26.0.23",
