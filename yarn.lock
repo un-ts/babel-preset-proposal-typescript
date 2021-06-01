@@ -88,7 +88,7 @@
     eslint-plugin-unicorn "^31.0.0"
     eslint-plugin-vue "^7.9.0"
 
-"@1stg/lib-config@^1.2.10":
+"@1stg/lib-config@^1.2.11":
   version "1.2.11"
   resolved "https://registry.yarnpkg.com/@1stg/lib-config/-/lib-config-1.2.11.tgz#6db6ad8310c119ecf52c88fa4a6936ac7b6ee170"
   integrity sha512-2atocIaWQrxCilj6bcadlTMr9grV4gynUvI+GSSgTav/6BYp3FL5zZwNefDoLPpX4UrN3v4R2x110e0P1tYCjw==
@@ -2862,11 +2862,9 @@ babel-preset-jest@^26.6.2:
 
 babel-preset-proposal-typescript@^2.0.2:
   version "0.0.0"
-  uid ""
 
 "babel-preset-proposal-typescript@link:.":
   version "0.0.0"
-  uid ""
 
 babylon@^7.0.0-beta.44:
   version "7.0.0-beta.47"
