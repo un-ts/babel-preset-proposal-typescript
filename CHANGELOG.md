@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0
+
+### Minor Changes
+
+- [`c29d8f7`](https://github.com/rx-ts/babel-preset-proposal-typescript/commit/c29d8f72e10fbb10e4bfabf37ce54365e31d0a40) Thanks [@JounQin](https://github.com/JounQin)! - feat: disable private-methods for typescript 4.3+
+
 ## 2.1.0
 
 ### Minor Changes
