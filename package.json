@@ -30,7 +30,7 @@
     "build:r": "r",
     "build:ts": "tsc -P src",
     "lint": "run-p lint:*",
-    "lint:es": "cross-env PARSER_NO_WATCH=true eslint . --cache --ext js,md,ts -f friendly",
+    "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc -P src --noEmit",
     "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "prerelease": "npm run build",
