@@ -9,7 +9,6 @@ import proposalFunctionSent from '@babel/plugin-proposal-function-sent'
 import proposalJsonStrings from '@babel/plugin-proposal-json-strings'
 import proposalPartialApplication from '@babel/plugin-proposal-partial-application'
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
-import proposalPrivateMethods from '@babel/plugin-proposal-private-methods'
 import proposalPrivatePropertyInObject from '@babel/plugin-proposal-private-property-in-object'
 import proposalRecordAndTuple from '@babel/plugin-proposal-record-and-tuple'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
@@ -24,9 +23,9 @@ export interface ProposalTypeScriptOptions {
   decoratorsBeforeExport?: boolean
   decoratorsLegacy?: boolean
   isTSX?: boolean
-  pipelineOperator?: 'minimal' | 'smart' | 'fsharp'
+  pipelineOperator?: 'fsharp' | 'minimal' | 'smart'
   recordTuplePolyfill?: boolean | string
-  recordTupleSyntaxType?: 'hash' | 'bar'
+  recordTupleSyntaxType?: 'bar' | 'hash'
 }
 
 export default declare(
@@ -81,12 +80,6 @@ export default declare(
           proposalPipelineOperator,
           {
             proposal: pipelineOperator,
-          },
-        ],
-        [
-          proposalPrivateMethods,
-          {
-            loose: classLoose,
           },
         ],
         [

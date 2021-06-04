@@ -1,8 +1,3 @@
 {
-  "extends": "./node_modules/@1stg/tsconfig/lib",
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+  "extends": "@1stg/tsconfig/node"
 }

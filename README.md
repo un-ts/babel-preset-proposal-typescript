@@ -44,11 +44,10 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 7.  [json-strings](https://www.npmjs.com/package/@babel/plugin-proposal-json-strings)
 8.  [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
 9.  [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
-10. [private-methods](https://www.npmjs.com/package/@babel/plugin-proposal-private-methods)
-11. [private-property-in-object](https://www.npmjs.com/package/@babel/plugin-proposal-private-property-in-object)
-12. [record-and-tuple](https://www.npmjs.com/package/@babel/plugin-proposal-record-and-tuple)
-13. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-14. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
+10. [private-property-in-object](https://www.npmjs.com/package/@babel/plugin-proposal-private-property-in-object)
+11. [record-and-tuple](https://www.npmjs.com/package/@babel/plugin-proposal-record-and-tuple)
+12. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+13. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148-https-githubcom-babel-babel-pull-10148)
 
 ## Install
 
