@@ -67,7 +67,7 @@
     "@changesets/changelog-github": "^0.4.1",
     "@changesets/cli": "^2.17.0",
     "@types/babel__core": "^7.1.16",
-    "@types/jest": "^26.0.24",
+    "@types/jest": "^27.0.2",
     "clean-publish": "^2.2.0",
     "ts-node": "^10.2.1",
     "typescript": "^4.3.5"
