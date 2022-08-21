@@ -1,5 +1,5 @@
-import _ from './function-bind'
-import { execute } from './helpers'
+import _ from './function-bind.js'
+import { execute } from './helpers.js'
 
 const proposal = 'function-bind'
 

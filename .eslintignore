@@ -1,7 +1,7 @@
-!/.*.js
 coverage
 lib
 node_modules
 CHANGELOG.md
-# babel-eslint parse issue, ignore temporarily
-test/private-methods.ts
+/test/v8intrinsic.cjs
+!/.github
+!/.*.js

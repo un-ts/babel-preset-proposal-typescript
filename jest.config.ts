@@ -1,6 +1,18 @@
-import { IS_RECORD_TUPLE_SUPPORTED } from './src/utils'
+import compareVersions from 'compare-versions'
+
+const NODE_VERSION = process.versions.node
+
+const IS_RECORD_TUPLE_SUPPORTED = compareVersions.compare(
+  NODE_VERSION,
+  '14.6',
+  '>=',
+)
 
 export default {
+  extensionsToTreatAsEsm: ['.ts'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   transform: {
     '^.+\\.(m?j|t)s$': 'babel-jest',
   },

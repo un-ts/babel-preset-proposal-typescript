@@ -1,0 +1,30 @@
+diff --git a/node_modules/@1stg/eslint-config/overrides.js b/node_modules/@1stg/eslint-config/overrides.js
+index b2a7d54..8a901fd 100644
+--- a/node_modules/@1stg/eslint-config/overrides.js
++++ b/node_modules/@1stg/eslint-config/overrides.js
+@@ -88,6 +88,9 @@ const resolveSettings = {
+ 
+ const tsBase = {
+   files: ['*.cts', '*.mts', '*.ts', '*.tsx'],
++  parserOptions: {
++    project,
++  },
+   extends: [
+     'plugin:@typescript-eslint/eslint-recommended',
+     'plugin:@typescript-eslint/recommended',
+@@ -160,7 +163,6 @@ const tsBase = {
+     ],
+     '@typescript-eslint/prefer-for-of': 2,
+     '@typescript-eslint/prefer-function-type': 2,
+-    '@typescript-eslint/prefer-optional-chain': 2,
+     '@typescript-eslint/prefer-ts-expect-error': 2,
+     '@typescript-eslint/sort-type-union-intersection-members': 2,
+     '@typescript-eslint/triple-slash-reference': [
+@@ -241,6 +243,7 @@ exports.ts = [
+       '@typescript-eslint/no-unnecessary-condition': 2,
+       '@typescript-eslint/no-unnecessary-qualifier': 2,
+       '@typescript-eslint/no-unnecessary-type-arguments': 2,
++      '@typescript-eslint/prefer-optional-chain': 2,
+       '@typescript-eslint/prefer-readonly': 2,
+       '@typescript-eslint/prefer-reduce-type-parameter': 2,
+       '@typescript-eslint/prefer-string-starts-ends-with': 2,

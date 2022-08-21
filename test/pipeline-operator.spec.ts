@@ -1,5 +1,5 @@
-import _ from './pipeline-operator'
-import { execute } from './helpers'
+import { execute } from './helpers.js'
+import _ from './pipeline-operator.js'
 
 const proposal = 'pipeline-operator'
 
