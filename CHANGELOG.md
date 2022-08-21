@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0
+
+### Major Changes
+
+- [`d0e4cf2`](https://github.com/un-ts/babel-preset-proposal-typescript/commit/d0e4cf219a76aa16e5c2379dedfe6750f7aade7f) Thanks [@JounQin](https://github.com/JounQin)! - feat!: upgrade to `typescript@v4.7`, remove unnecessary plugins
+
+### Minor Changes
+
+- [`d0e4cf2`](https://github.com/un-ts/babel-preset-proposal-typescript/commit/d0e4cf219a76aa16e5c2379dedfe6750f7aade7f) Thanks [@JounQin](https://github.com/JounQin)! - feat: `babel-preset-proposal-typescript` is now a dual (commonjs + ESM) package
+
 ## 2.2.0
 
 ### Minor Changes
