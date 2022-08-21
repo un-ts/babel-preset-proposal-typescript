@@ -1,14 +1,21 @@
-import { execSync } from 'child_process'
+import { execSync } from 'node:child_process'
 
-import { execute, resolve } from './helpers'
+import { execute, resolve } from './helpers.js'
 
 const proposal = 'v8intrinsic'
 
-test(proposal, () => {
-  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  expect(() => require('./v8intrinsic')).toThrowErrorMatchingSnapshot()
+test(proposal, async () => {
+  expect(() => execute(proposal + '.cjs')).toThrowErrorMatchingSnapshot()
+  await expect(
+    // @ts-expect-error
+    import('./v8intrinsic.cjs'),
+  ).rejects.toThrowErrorMatchingSnapshot()
   expect(
-    execSync(`node --allow-natives-syntax ${resolve(proposal)}.ts`).toString(),
+    execSync(
+      `node --allow-natives-syntax ${resolve(
+        proposal,
+        // TODO: make `.ts` working again
+      )}.cjs`,
+    ).toString(),
   ).toBe('1')
 })

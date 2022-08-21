@@ -1,5 +1,5 @@
-import _ from './throw-expressions'
-import { execute } from './helpers'
+import { execute } from './helpers.js'
+import _ from './throw-expressions.js'
 
 const proposal = 'throw-expressions'
 

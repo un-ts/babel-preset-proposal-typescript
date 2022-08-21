@@ -1,5 +1,5 @@
-import _ from './function-sent'
-import { execute } from './helpers'
+import _ from './function-sent.js'
+import { execute } from './helpers.js'
 
 const proposal = 'function-sent'
 

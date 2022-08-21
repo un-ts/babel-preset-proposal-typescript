@@ -1,5 +1,5 @@
-import _ from './do-expressions'
-import { execute } from './helpers'
+import _ from './do-expressions.js'
+import { execute } from './helpers.js'
 
 const proposal = 'do-expressions'
 

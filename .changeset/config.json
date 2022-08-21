@@ -1,9 +1,9 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.6.0/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config/schema.json",
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "rx-ts/babel-preset-proposal-typescript"
+      "repo": "un-ts/babel-preset-proposal-typescript"
     }
   ],
   "commit": false,

@@ -1,5 +1,5 @@
-import _ from './json-strings'
-import { execute } from './helpers'
+import { execute } from './helpers.js'
+import _ from './json-strings.js'
 
 const proposal = 'json-strings'
 

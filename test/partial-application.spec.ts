@@ -1,5 +1,5 @@
-import _ from './partial-application'
-import { execute } from './helpers'
+import { execute } from './helpers.js'
+import _ from './partial-application.js'
 
 const proposal = 'partial-application'
 

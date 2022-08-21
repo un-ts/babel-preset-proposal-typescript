@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`function-bind 1`] = `"Cannot read property 'weight' of undefined"`;

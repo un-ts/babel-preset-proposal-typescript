@@ -2,27 +2,31 @@ const {
   configs,
   jest,
   js,
+  json,
+  jsonc,
   test,
   ts,
   md,
   mdx,
+  yml,
 } = require('@1stg/eslint-config/overrides')
-
-const tsBase = ts[0]
 
 module.exports = {
   extends: ['@1stg/eslint-config/base'],
   overrides: [
-    tsBase,
+    ts[0],
     {
       ...js,
       files: 'test/*.{js,ts}',
       rules: js.rules,
     },
     jest,
+    json,
+    jsonc,
     md,
     mdx,
     test,
     configs,
+    yml,
   ],
 }
