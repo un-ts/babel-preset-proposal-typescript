@@ -4,6 +4,9 @@ import { execute } from './helpers.js'
 const proposal = 'function-bind'
 
 test(proposal, () => {
-  expect(() => execute(proposal)).toThrowErrorMatchingSnapshot()
+  // Cannot read property 'weight' of undefined
+  // vs.
+  // Cannot read properties of undefined (reading 'weight')
+  expect(() => execute(proposal)).toThrowError(/^Cannot read propert(y|ies) /)
   expect(_()).toEqual([2, 10, 15])
 })

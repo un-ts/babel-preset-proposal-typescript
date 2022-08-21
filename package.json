@@ -39,7 +39,6 @@
     "build": "run-p build:*",
     "build:r": "r -f cjs,es2015",
     "build:ts": "tsc -p src",
-    "codesandbox:install": "rm -rf /home/node/.cache/yarn && yarn",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc -p src --noEmit",
