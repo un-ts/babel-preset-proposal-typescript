@@ -44,7 +44,6 @@
     "lint:tsc": "tsc -p src --noEmit",
     "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
     "prerelease": "npm run build",
-    "pretest": "yarn build",
     "release": "clean-pkg-json && changeset publish",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest"
   },
