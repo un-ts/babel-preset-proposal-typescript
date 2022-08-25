@@ -10,7 +10,12 @@ module.exports = {
         },
       },
     ],
-    '@babel/typescript',
+    [
+      '@babel/typescript',
+      {
+        allowDeclareFields: true,
+      },
+    ],
     'proposal-typescript',
   ],
   plugins: compare(process.versions.node, '14.6', '<')
