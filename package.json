@@ -72,7 +72,7 @@
   "devDependencies": {
     "@1stg/lib-config": "^10.2.0",
     "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.3",
+    "@changesets/cli": "^2.27.1",
     "@node-loader/babel": "^2.0.1",
     "@types/babel__core": "^7.1.19",
     "@types/jest": "^28.1.8",
