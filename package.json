@@ -75,7 +75,7 @@
     "@changesets/cli": "^2.24.3",
     "@node-loader/babel": "^2.0.1",
     "@types/babel__core": "^7.1.19",
-    "@types/jest": "^28.1.8",
+    "@types/jest": "^29.5.11",
     "@types/node": "^18.7.13",
     "clean-pkg-json": "^1.2.0",
     "core-dts": "^0.0.3",
