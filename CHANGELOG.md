@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.0
+
+### Major Changes
+
+- [#167](https://github.com/un-ts/babel-preset-proposal-typescript/pull/167) [`bca62a1`](https://github.com/un-ts/babel-preset-proposal-typescript/commit/bca62a12dd0677aa6766ee6cf18e49d786a4d20c) Thanks [@JounQin](https://github.com/JounQin)! - feat!: bump `@babel/core@^7.23.0` and `typescript@^5.3.0`
+
 ## 3.0.0
 
 ### Major Changes

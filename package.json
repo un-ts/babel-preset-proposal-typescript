@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-proposal-typescript",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "type": "module",
   "description": "Yet another Babel preset for TypeScript, only transforms proposals which TypeScript does not support now.",
   "repository": "git+https://github.com/un-ts/babel-preset-proposal-typescript.git",
