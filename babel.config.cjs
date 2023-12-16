@@ -1,6 +1,7 @@
-const { compare } = require('compare-versions')
+const isRecordTupleSupported = require('./scripts/is-record-tuple-supported.cjs')
 
 module.exports = {
+  sourceType: 'module',
   presets: [
     [
       '@babel/env',
@@ -18,14 +19,27 @@ module.exports = {
     ],
     'proposal-typescript',
   ],
-  plugins: compare(process.versions.node, '14.6', '<')
-    ? [
+  plugins: isRecordTupleSupported()
+    ? undefined
+    : [
         [
           '@babel/syntax-record-and-tuple',
           {
             syntaxType: 'hash',
           },
         ],
-      ]
-    : undefined,
+      ],
+  overrides: [
+    {
+      test: 'test/import-defer.cts',
+      presets: [
+        [
+          'proposal-typescript',
+          {
+            importDefer: true,
+          },
+        ],
+      ],
+    },
+  ],
 }

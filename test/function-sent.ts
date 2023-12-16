@@ -3,12 +3,15 @@ function* adder(total = 0) {
   let request
   do {
     switch ((request = function.sent)) {
-      case undefined:
+      case undefined: {
         break
-      case 'done':
+      }
+      case 'done': {
         return total
-      default:
+      }
+      default: {
         increment = request
+      }
     }
     yield (total += increment)
   } while (true)

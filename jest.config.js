@@ -1,25 +1,23 @@
-import compareVersions from 'compare-versions'
+// @ts-check
 
-const NODE_VERSION = process.versions.node
+import isRecordTupleSupported from './scripts/is-record-tuple-supported.cjs'
 
-const IS_RECORD_TUPLE_SUPPORTED = compareVersions.compare(
-  NODE_VERSION,
-  '14.6',
-  '>=',
-)
-
+/**
+ * @type {import('jest').Config}
+ */
 export default {
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^(\\.{1,2}/.*)\\.cjs$': ['$1.cts', '$1.cjs'],
   },
   transform: {
-    '^.+\\.(m?j|t)s$': 'babel-jest',
+    '^.+\\.([c|m]?[j|t])s$': 'babel-jest',
   },
   collectCoverage: true,
   collectCoverageFrom: [
     `<rootDir>/test/**/!(${
-      IS_RECORD_TUPLE_SUPPORTED ? '' : 'record-and-tuple|'
+      isRecordTupleSupported() ? '' : 'record-and-tuple|'
     }v8intrinsic).ts`,
   ],
   coverageThreshold: {
