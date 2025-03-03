@@ -94,6 +94,6 @@
   },
   "resolutions": {
     "babel-preset-proposal-typescript": "link:.",
-    "prettier": "^2.8.8"
+    "prettier": "^3.5.3"
   }
 }
