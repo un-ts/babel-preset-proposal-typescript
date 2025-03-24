@@ -83,7 +83,7 @@
     "@node-loader/babel": "^2.0.1",
     "@types/babel__core": "^7.20.5",
     "@types/jest": "^29.5.11",
-    "@types/node": "^18.19.3",
+    "@types/node": "^18.19.83",
     "@vitest/coverage-istanbul": "^1.0.4",
     "clean-pkg-json": "^1.2.0",
     "core-dts": "^0.0.3",
