@@ -44,10 +44,8 @@
     "lint:tsc": "tsc -p src --noEmit",
     "prepack": "clean-pkg-json",
     "prepare": "simple-git-hooks && yarn-berry-deduplicate || exit 0",
-    "prerelease": "yarn build",
-    "release": "changeset publish",
-    "pretest": "yarn build",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest",
+    "release": "yarn build && changeset publish",
+    "test": "yarn build && node --experimental-vm-modules node_modules/jest/bin/jest",
     "version": "changeset version && yarn --no-immutable"
   },
   "peerDependencies": {
