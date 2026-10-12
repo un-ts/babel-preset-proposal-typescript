@@ -21,34 +21,13 @@ export default [
     ],
   },
   {
-    // the Babel config of this repo is for Babel 8, while the ESLint Babel
-    // parser is still on Babel 7
-    files: ['**/*.{cjs,js,jsx,mjs}'],
-    languageOptions: {
-      parserOptions: {
-        babelOptions: {
-          configFile: false,
-        },
-      },
-    },
-  },
-  {
     files: ['test/**/*.{cjs,cts,js,ts}'],
     rules: {
-      '@typescript-eslint/ban-ts-comment': 'off',
+      // test cases assert arbitrary literal values
       '@typescript-eslint/no-magic-numbers': 'off',
-      '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unsafe-return': 'off',
-      '@typescript-eslint/require-await': 'off',
-      'jest/valid-title': 'off',
       'no-magic-numbers': 'off',
-      'sonarjs/code-eval': 'off',
-      'sonarjs/os-command': 'off',
-      'sonarjs/todo-tag': 'off',
-      'unicorn/no-anonymous-default-export': 'off',
+      // test titles are shared with the fixture names through variables
+      'jest/valid-title': 'off',
     },
   },
   {
@@ -59,11 +38,12 @@ export default [
       'test/regexp-modifiers.ts',
     ],
     rules: {
+      // these fixtures intentionally use RegExp syntax which is not supported yet
       'regexp/no-invalid-regexp': 'off',
       'regexp/no-unused-capturing-group': 'off',
       'regexp/no-useless-non-capturing-group': 'off',
       'regexp/strict': 'off',
-      'unicorn/better-regex': 'off',
+      'unicorn-x/better-regex': 'off',
     },
   },
 ]

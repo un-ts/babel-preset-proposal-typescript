@@ -7,14 +7,14 @@ const proposal = 'v8intrinsic'
 test(proposal, async () => {
   expect(() => execute(proposal + '.cjs')).toThrowErrorMatchingSnapshot()
   await expect(
-    // @ts-expect-error
+    // @ts-expect-error -- the v8intrinsic syntax is intentionally invalid for TypeScript
     import('./v8intrinsic.cjs'),
   ).rejects.toThrowErrorMatchingSnapshot()
   expect(
     execSync(
       `node --allow-natives-syntax ${resolve(
         proposal,
-        // TODO: make `.ts` working again
+        // note: the `.ts` extension is not supported by the V8 loader yet
       )}.cjs`,
     ).toString(),
   ).toBeDefined()

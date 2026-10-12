@@ -12,5 +12,7 @@ class Point {
   }
 }
 
-export default (x: number, y: number) =>
+const equalsToZero = (x: number, y: number) =>
   new Point(x, y).equalsTo(new Point(1, 0))
+
+export default equalsToZero
