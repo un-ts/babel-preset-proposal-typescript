@@ -53,7 +53,9 @@ export default [
   },
   {
     files: [
+      'test/duplicate-named-capturing-groups-regex.spec.ts',
       'test/duplicate-named-capturing-groups-regex.ts',
+      'test/regexp-modifiers.spec.ts',
       'test/regexp-modifiers.ts',
     ],
     rules: {
