@@ -6,7 +6,7 @@
   "repository": "git+https://github.com/un-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "yarn@4.18.1",
   "engines": {
     "node": "^20.19.0 || ^22.18.0 || >=24.11.0"
   },
