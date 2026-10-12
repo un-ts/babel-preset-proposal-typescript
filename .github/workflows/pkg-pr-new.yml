@@ -23,10 +23,10 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
 
       - name: Build
         run: yarn build
 
       - name: Publish
-        run: npx --yes pkg-pr-new publish --compact
+        run: yarn dlx pkg-pr-new publish --compact
