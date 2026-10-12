@@ -1,3 +1,5 @@
 const regex = /(?i:a)a/
 
-export default (text: string) => regex.test(text)
+const testRegexpModifiers = (text: string) => regex.test(text)
+
+export default testRegexpModifiers

@@ -19,13 +19,19 @@ export const read = (file: string): string =>
     .readFileSync(resolve(file) + (/\.[cm]?[jt]s$/.test(file) ? '' : '.ts'))
     .toString()
 
-export const execute = (file: string, ...args: number[] | string[]) =>
-  vm.runInNewContext(
-    ts.transpileModule(read(file), {
-      compilerOptions: {
-        module: ts.ModuleKind.CommonJS,
-        target: ts.ScriptTarget.ES2019,
-      },
-    }).outputText,
-    { exports: {} },
-  )(...args)
+export const execute = (
+  file: string,
+  ...args: Array<number | string>
+): unknown => {
+  const script = ts.transpileModule(read(file), {
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2019,
+    },
+  }).outputText
+  // eslint-disable-next-line sonarjs/code-eval -- the transpiled fixtures are executed on purpose
+  const run = vm.runInNewContext(script, { exports: {} }) as (
+    ...args: Array<number | string>
+  ) => unknown
+  return run(...args)
+}
