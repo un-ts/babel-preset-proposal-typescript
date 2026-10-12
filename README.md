@@ -33,21 +33,25 @@ So that you can use babel to transform proposals which are current in stage 0-2 
 
 ## Enabled proposal plugins
 
-1.  [async-do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-async-do-expressions)
-2.  [destructuring-private](https://www.npmjs.com/package/@babel/plugin-proposal-destructuring-private)
-3.  [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
-4.  [duplicate-named-capturing-groups-regex](https://www.npmjs.com/package/@babel/plugin-proposal-duplicate-named-capturing-groups-regex)
-5.  [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
-6.  [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
-7.  [import-defer](https://www.npmjs.com/package/@babel/plugin-proposal-import-defer)
-8.  [import-wasm-source](https://www.npmjs.com/package/@babel/plugin-proposal-import-wasm-source)
-9.  [optional-chaining-assign](https://www.npmjs.com/package/@babel/plugin-proposal-optional-chaining-assign)
-10. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
-11. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
-12. [record-and-tuple](https://www.npmjs.com/package/@babel/plugin-proposal-record-and-tuple)
-13. [regexp-modifiers](https://www.npmjs.com/package/@babel/plugin-proposal-regexp-modifiers)
-14. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
-15. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148httpsgithubcombabelbabelpull10148)
+1. [async-do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-async-do-expressions)
+2. [destructuring-private](https://www.npmjs.com/package/@babel/plugin-proposal-destructuring-private)
+3. [discard-binding](https://www.npmjs.com/package/@babel/plugin-proposal-discard-binding)
+4. [do-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-do-expressions)
+5. [duplicate-named-capturing-groups-regex](https://www.npmjs.com/package/@babel/plugin-transform-duplicate-named-capturing-groups-regex)
+6. [export-default-from](https://www.npmjs.com/package/@babel/plugin-proposal-export-default-from)
+7. [function-bind](https://www.npmjs.com/package/@babel/plugin-proposal-function-bind)
+8. [function-sent](https://www.npmjs.com/package/@babel/plugin-proposal-function-sent)
+9. [import-defer](https://www.npmjs.com/package/@babel/plugin-proposal-import-defer)
+10. [import-wasm-source](https://www.npmjs.com/package/@babel/plugin-proposal-import-wasm-source)
+11. [optional-chaining-assign](https://www.npmjs.com/package/@babel/plugin-proposal-optional-chaining-assign)
+12. [partial-application](https://www.npmjs.com/package/@babel/plugin-proposal-partial-application)
+13. [pipeline-operator](https://www.npmjs.com/package/@babel/plugin-proposal-pipeline-operator)
+14. [regexp-modifiers](https://www.npmjs.com/package/@babel/plugin-transform-regexp-modifiers)
+15. [throw-expressions](https://www.npmjs.com/package/@babel/plugin-proposal-throw-expressions)
+16. [v8intrinsic](./src/v8intrinsic.ts) - [Further Detail](https://babeljs.io/blog/2019/09/05/7.6.0#v8-intrinsic-runtime-functions-parsing-10148httpsgithubcombabelbabelpull10148)
+
+> \[!NOTE]
+> [`record-and-tuple`](https://github.com/babel/babel/issues/17241) syntax support has been removed in Babel 8, so it is no longer enabled.
 
 ## Install
 
@@ -61,16 +65,18 @@ npm i -D babel-preset-proposal-typescript
 
 ## Options
 
-| option                          | description                                                                                                  | defaults                                                                |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| `decoratorsBeforeExport`        | See [Babel Document](https://babeljs.io/docs/en/babel-plugin-proposal-decorators#decoratorsbeforeexport)     | `undefined`                                                             |
-| `decoratorsLegacy`              | Whether to use legacy decorators semantic                                                                    | `true`                                                                  |
-| `importDefer`                   | Whether to enabled `import-defer` plugin, if true `transform-modules-commonjs` will be enabled automatically | `false`                                                                 |
-| `isTSX`                         | Whether to enable `jsx` plugin with `typescript`                                                             | `false`, but `true` for `/\.[jt]sx$/`                                   |
-| `optionalChainingAssignVersion` | Version for `optional-chaining-assign` plugin, only `'2023-07'` allowed for now                              | `'2023-07'`                                                             |
-| `pipelineOperator`              | Implementation of pipeline operator, `minimal`, `smart` or `fsharp`                                          | `minimal`                                                               |
-| `recordTuplePolyfill`           | Whether to enable import `record-tuple` plugin and polyfill, or specific the polyfill module name            | `true` for Node>=14.6, it represents `@bloomberg/record-tuple-polyfill` |
-| `recordTupleSyntaxType`         | `record-tuple` syntax, `hash` or `bar`                                                                       | `hash`                                                                  |
+| option                          | description                                                                                                  | defaults                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| `decoratorsLegacy`              | Whether to use legacy decorators semantic, `version: 'legacy'` or `'2023-11'` for Babel 8                    | `true`                                |
+| `importDefer`                   | Whether to enabled `import-defer` plugin, if true `transform-modules-commonjs` will be enabled automatically | `false`                               |
+| `isTSX`                         | Whether to enable `jsx` plugin with `typescript`                                                             | `false`, but `true` for `/\.[jt]sx$/` |
+| `optionalChainingAssignVersion` | Version for `optional-chaining-assign` plugin, only `'2023-07'` allowed for now                              | `'2023-07'`                           |
+| `partialApplicationVersion`     | Version for `partial-application` plugin, only `'2018-07'` allowed for now                                   | `'2018-07'`                           |
+| `pipelineOperator`              | Implementation of pipeline operator, `hack` or `fsharp`                                                      | `fsharp`                              |
+| `pipelineTopicToken`            | Topic token for the pipeline operator, only used when `pipelineOperator` is `hack`                           | `'%'`                                 |
+
+> \[!NOTE]
+> `pipelineOperator: 'hack'` cannot be combined with the always enabled `v8intrinsic` plugin since Babel 8, because both rely on the `%` token.
 
 ## Usage
 

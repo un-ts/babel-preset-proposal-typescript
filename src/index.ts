@@ -1,9 +1,10 @@
-import type { ConfigAPI } from '@babel/core'
-import { declare } from '@babel/helper-plugin-utils'
+import type { PluginItem, PresetAPI } from '@babel/core'
+import { declarePreset } from '@babel/helper-plugin-utils'
 import proposalAsyncDoExpressions from '@babel/plugin-proposal-async-do-expressions'
 import proposalDestructuringPrivate from '@babel/plugin-proposal-destructuring-private'
+import proposalDiscardBinding from '@babel/plugin-proposal-discard-binding'
 import proposalDoExpressions from '@babel/plugin-proposal-do-expressions'
-import proposalDuplicateNamedCapturingGroupsRegex from '@babel/plugin-proposal-duplicate-named-capturing-groups-regex'
+import proposalExportDefaultFrom from '@babel/plugin-proposal-export-default-from'
 import proposalFunctionBind from '@babel/plugin-proposal-function-bind'
 import proposalFunctionSent from '@babel/plugin-proposal-function-sent'
 import proposalImportDefer from '@babel/plugin-proposal-import-defer'
@@ -11,66 +12,73 @@ import proposalImportWasmSource from '@babel/plugin-proposal-import-wasm-source'
 import proposalOptionalChainingAssign from '@babel/plugin-proposal-optional-chaining-assign'
 import proposalPartialApplication from '@babel/plugin-proposal-partial-application'
 import proposalPipelineOperator from '@babel/plugin-proposal-pipeline-operator'
-import proposalRecordAndTuple from '@babel/plugin-proposal-record-and-tuple'
-import proposalRegexpModifiers from '@babel/plugin-proposal-regexp-modifiers'
 import proposalThrowExpression from '@babel/plugin-proposal-throw-expressions'
 import syntaxDecorators from '@babel/plugin-syntax-decorators'
+import syntaxJSX from '@babel/plugin-syntax-jsx'
 import syntaxTypeScript from '@babel/plugin-syntax-typescript'
+import proposalDuplicateNamedCapturingGroupsRegex from '@babel/plugin-transform-duplicate-named-capturing-groups-regex'
 import transformModulesCommonjs from '@babel/plugin-transform-modules-commonjs'
+import proposalRegexpModifiers from '@babel/plugin-transform-regexp-modifiers'
 
-import { IS_RECORD_TUPLE_SUPPORTED } from './utils.js'
 import syntaxV8intrinsic from './v8intrinsic.js'
 
 export interface ProposalTypeScriptOptions {
-  decoratorsBeforeExport?: boolean
   decoratorsLegacy?: boolean
   importDefer?: boolean | 'commonjs'
   isTSX?: boolean
   optionalChainingAssignVersion?: '2023-07'
-  pipelineOperator?: 'fsharp' | 'minimal' | 'smart'
-  recordTuplePolyfill?: boolean | string
-  recordTupleSyntaxType?: 'bar' | 'hash'
+  partialApplicationVersion?: '2018-07'
+  pipelineOperator?: 'fsharp' | 'hack'
+  pipelineTopicToken?: '@@' | '#' | '%' | '^' | '^^'
 }
 
-export default declare(
+export default declarePreset(
   (
-    api: ConfigAPI,
+    api: PresetAPI,
     {
-      decoratorsBeforeExport,
       decoratorsLegacy = true,
       importDefer,
       isTSX,
-      pipelineOperator = 'minimal',
+      pipelineOperator = 'fsharp',
+      pipelineTopicToken = '%',
       optionalChainingAssignVersion = '2023-07',
-      recordTuplePolyfill = IS_RECORD_TUPLE_SUPPORTED,
-      recordTupleSyntaxType = 'hash',
+      partialApplicationVersion = '2018-07',
     }: ProposalTypeScriptOptions,
   ) => {
-    api.assertVersion(7)
+    api.assertVersion('^8.0.0')
     return {
       plugins: [
         [
           syntaxDecorators,
           {
-            decoratorsBeforeExport,
-            legacy: decoratorsLegacy,
+            version: decoratorsLegacy ? 'legacy' : '2023-11',
           },
         ],
-        [
-          syntaxTypeScript,
-          {
-            isTSX,
-          },
-        ],
-        syntaxV8intrinsic,
+        ...(isTSX ? [syntaxJSX] : []),
+        syntaxTypeScript,
+        // Babel 8 disallows combining `v8intrinsic` with Hack-style pipes,
+        // both of them rely on the same `%` token
+        ...(pipelineOperator === 'hack' ? [] : [syntaxV8intrinsic]),
         proposalAsyncDoExpressions,
         proposalDestructuringPrivate,
+        [
+          proposalDiscardBinding,
+          {
+            syntaxType: 'void',
+          },
+        ] as PluginItem,
         proposalDuplicateNamedCapturingGroupsRegex,
         proposalDoExpressions,
+        proposalExportDefaultFrom,
         proposalFunctionBind,
         proposalFunctionSent,
         ...(importDefer ? [proposalImportDefer, transformModulesCommonjs] : []),
-        proposalPartialApplication,
+        [
+          proposalPartialApplication,
+          {
+            version: partialApplicationVersion,
+          },
+        ],
         proposalImportWasmSource,
         [
           proposalOptionalChainingAssign,
@@ -82,36 +90,21 @@ export default declare(
           proposalPipelineOperator,
           {
             proposal: pipelineOperator,
+            topicToken:
+              pipelineOperator === 'hack' ? pipelineTopicToken : undefined,
           },
-        ],
-        recordTuplePolyfill && [
-          proposalRecordAndTuple,
-          {
-            importPolyfill: !!recordTuplePolyfill,
-            polyfillModuleName:
-              typeof recordTuplePolyfill === 'string'
-                ? recordTuplePolyfill
-                : undefined,
-            syntaxType: recordTupleSyntaxType,
-          },
-        ],
+        ] as PluginItem,
         proposalRegexpModifiers,
         proposalThrowExpression,
-      ].filter(Boolean),
-      // no need to override if it has been enabled
+      ],
+      // Babel 8 detects TSX by file extension, `isTSX` forces JSX parsing for
+      // every file instead, otherwise only `.[jt]sx` files are treated as TSX
       overrides: isTSX
         ? undefined
         : [
             {
               test: /\.[jt]sx$/,
-              plugins: [
-                [
-                  syntaxTypeScript,
-                  {
-                    isTSX: true,
-                  },
-                ],
-              ],
+              plugins: [syntaxJSX],
             },
           ],
     }

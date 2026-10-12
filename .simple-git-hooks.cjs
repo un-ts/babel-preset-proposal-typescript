@@ -1,1 +1,1 @@
-module.exports = require('@1stg/simple-git-hooks')
+module.exports = require('@1stg/simple-git-hooks').default
