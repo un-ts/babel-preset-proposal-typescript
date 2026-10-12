@@ -2,6 +2,5 @@
   "extends": "@1stg/tsconfig/node16",
   "compilerOptions": {
     "types": ["core-dts/src/proposals/stage-0", "jest", "node"]
-  },
-  "exclude": ["test"]
+  }
 }
