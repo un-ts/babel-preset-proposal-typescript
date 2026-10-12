@@ -5,6 +5,15 @@ on:
     branches:
       - master
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
@@ -25,14 +34,15 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
+      - name: Build
+        run: yarn build
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-          publish: yarn release
-          commit: 'chore: release babel-preset-proposal-typescript'
-          title: 'chore: release babel-preset-proposal-typescript'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          commit-message: 'chore: release babel-preset-proposal-typescript'
+          pr-title: 'chore: release babel-preset-proposal-typescript'
+          version-script: yarn run version
+          publish-script: yarn release
+          github-token: ${{ secrets.GITHUB_TOKEN }}
