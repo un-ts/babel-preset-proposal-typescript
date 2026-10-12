@@ -20,4 +20,12 @@ export const read = (file: string): string =>
     .toString()
 
 export const execute = (file: string, ...args: number[] | string[]) =>
-  vm.runInNewContext(ts.transpile(read(file)), { exports: {} })(...args)
+  vm.runInNewContext(
+    ts.transpileModule(read(file), {
+      compilerOptions: {
+        module: ts.ModuleKind.CommonJS,
+        target: ts.ScriptTarget.ES2019,
+      },
+    }).outputText,
+    { exports: {} },
+  )(...args)

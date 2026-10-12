@@ -1,7 +1,5 @@
 // @ts-check
 
-import isRecordTupleSupported from './scripts/is-record-tuple-supported.cjs'
-
 /**
  * @type {import('jest').Config}
  */
@@ -15,11 +13,7 @@ export default {
     '^.+\\.([c|m]?[j|t])s$': 'babel-jest',
   },
   collectCoverage: true,
-  collectCoverageFrom: [
-    `<rootDir>/test/**/!(${
-      isRecordTupleSupported() ? '' : 'record-and-tuple|'
-    }v8intrinsic).ts`,
-  ],
+  collectCoverageFrom: ['<rootDir>/test/**/!(v8intrinsic).ts'],
   coverageThreshold: {
     global: {
       branches: 100,

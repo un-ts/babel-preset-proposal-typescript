@@ -1,6 +1,6 @@
 class Point {
   x: number
-  #y = 0
+  readonly #y = 0
 
   constructor(x: number, y: number) {
     this.x = x
