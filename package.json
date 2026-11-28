@@ -6,7 +6,7 @@
   "repository": "git+https://github.com/un-ts/babel-preset-proposal-typescript.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
-  "packageManager": "yarn@4.18.1",
+  "packageManager": "yarn@4.19.0",
   "engines": {
     "node": "^20.19.0 || ^22.18.0 || >=24.11.0"
   },
@@ -75,17 +75,17 @@
     "@babel/plugin-transform-regexp-modifiers": "^8.0.0"
   },
   "devDependencies": {
-    "@1stg/common-config": "^15.0.0",
+    "@1stg/common-config": "^17.0.0",
     "@babel/core": "^8.0.0",
     "@babel/preset-env": "^8.0.0",
     "@babel/preset-typescript": "^8.0.0",
-    "@changesets/changelog-github": "^1.0.0",
+    "@changesets/changelog-github": "^2.0.0",
     "@changesets/cli": "^3.0.0",
     "@commitlint/cli": "^21.0.0",
     "@node-loader/babel": "^2.0.1",
     "@pkgr/rollup": "^7.0.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.0.0",
     "@typescript/native": "npm:typescript@^7.0.0",
     "@vitest/coverage-istanbul": "^5.0.0",
     "babel-jest": "^30.0.0",
@@ -101,11 +101,11 @@
     "simple-git-hooks": "^2.14.0",
     "ts-node": "^10.9.2",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
-    "yarn-berry-deduplicate": "^7.0.0"
+    "yarn-berry-deduplicate": "^8.0.0"
   },
   "resolutions": {
     "@yarnpkg/core": "4.9.1",
-    "pm-dedup-core": "2.2.2",
+    "pm-dedup-core": "3.0.0",
     "prettier": "^3.0.0",
     "typescript": "npm:@typescript/typescript6@^6.0.2"
   }
